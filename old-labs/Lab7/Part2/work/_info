@@ -1,0 +1,191 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Jaden Reimer/Documents/ECE241/Lab7/Part2
+vcontrol
+Z1 !s110 1541584340
+!i10b 1
+!s100 iC^39]KSlQg3J<5LJSgeY2
+Im4_DYkZK8mflI@:4IzWbh1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1541583041
+Z4 8fill.v
+Z5 Ffill.v
+L0 197
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1541584340.000000
+Z8 !s107 fill.v|
+Z9 !s90 -reportprogress|300|fill.v|
+!i113 1
+Z10 tCvgOpt 0
+vdatapath
+R1
+!i10b 1
+!s100 6]Pjb[QKo:]_4;zhg=YnC2
+Img<f8:@AX9ei13jJOzCLG2
+R2
+R0
+R3
+R4
+R5
+L0 303
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vfill
+R1
+!i10b 1
+!s100 S591e>7OjPIYgcClS1:AR0
+Ih<]gO^K]jIbC@FX:7hgKh1
+R2
+R0
+R3
+R4
+R5
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vFSM
+R1
+!i10b 1
+!s100 <6zDeg<eAK?Ac:RGAPc0<1
+I]h9eCP7CA6<i7fDJH8g?h2
+R2
+R0
+R3
+R4
+R5
+L0 125
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+n@f@s@m
+vhex_decoder
+R1
+!i10b 1
+!s100 IXbe<Wk5Y:nOzOn=lGU9]0
+I>70E8WQ;An1:Ao8<Y4le43
+R2
+R0
+R3
+R4
+R5
+L0 375
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vvga_adapter
+R1
+!i10b 1
+!s100 2<V7moDJcN?;XAS210;_c1
+Ik?[Nn2kdB;EcXWa5@@dTz1
+R2
+R0
+Z11 w1541387259
+8vga_adapter.v
+Fvga_adapter.v
+L0 78
+R6
+r1
+!s85 0
+31
+R7
+!s107 vga_adapter.v|
+!s90 -reportprogress|300|vga_adapter.v|
+!i113 1
+R10
+vvga_address_translator
+Z12 !s110 1541572890
+!i10b 1
+!s100 `K`RWO2nRBN_9O[2kR2lY0
+ISLAi:]<6mKHeBkkaO1DFh3
+R2
+R0
+R11
+8vga_address_translator.v
+Fvga_address_translator.v
+L0 4
+R6
+r1
+!s85 0
+31
+Z13 !s108 1541572890.000000
+Z14 !s107 vga_controller.v|vga_address_translator.v|vga_pll.v|fill.v|
+R9
+!i113 1
+R10
+vvga_controller
+R12
+!i10b 1
+!s100 XbjY46ZEO<fXm::1SHFVi0
+IGX7D@am`LFn0fOEYnA?N13
+R2
+R0
+R11
+8vga_controller.v
+Fvga_controller.v
+L0 9
+R6
+r1
+!s85 0
+31
+R13
+R14
+R9
+!i113 1
+R10
+vvga_pll
+R12
+!i10b 1
+!s100 4XSTjD`VEiamX^n1@5J`b3
+InS4CFLIEOHD9AEaVkoljA1
+R2
+R0
+R11
+8vga_pll.v
+Fvga_pll.v
+L0 36
+R6
+r1
+!s85 0
+31
+R13
+R14
+R9
+!i113 1
+R10

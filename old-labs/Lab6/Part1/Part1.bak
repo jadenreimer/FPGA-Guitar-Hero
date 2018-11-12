@@ -1,0 +1,166 @@
+#working directory
+vlib work
+
+#verilog files to compile
+vlog sequence_detector.v
+
+#higest level module
+vsim sequence_detector
+
+#inputs & outputs to log
+log {/*}
+
+#add waves
+add wave {/*}
+
+#testing logic
+
+#initial reset
+
+force {KEY[0]} 1
+
+force {SW[0]} 0
+force {SW[1]} 0
+
+run 10ns
+#test counting for 5 cycles
+force {KEY[0]} 0
+
+force {SW[0]} 1
+force {SW[1]} 1
+
+run 10ns
+#
+force {KEY[0]} 1
+
+force {SW[0]} 1
+force {SW[1]} 1
+
+run 10ns
+#w= 1
+force {KEY[0]} 0
+
+force {SW[0]} 1
+force {SW[1]} 1
+
+run 10ns
+#
+force {KEY[0]} 1
+
+force {SW[0]} 1
+force {SW[1]} 1
+
+run 10ns
+#w= 11
+force {KEY[0]} 0
+
+force {SW[0]} 1
+force {SW[1]} 1
+
+run 10ns
+#
+force {KEY[0]} 1
+
+force {SW[0]} 1
+force {SW[1]} 1
+
+run 10ns
+#w= 111
+force {KEY[0]} 0
+
+force {SW[0]} 1
+force {SW[1]} 1
+
+run 10ns
+#
+force {KEY[0]} 1
+
+force {SW[0]} 1
+force {SW[1]} 1
+
+run 10ns
+#w= 1111 and should now output LEDR[9] as 1
+force {KEY[0]} 0
+
+force {SW[0]} 1
+force {SW[1]} 1
+
+run 10ns
+#
+force {KEY[0]} 1
+
+force {SW[0]} 1
+force {SW[1]} 1
+
+run 10ns
+#w= 11111 and should also output LEDR[9] as 1
+force {KEY[0]} 0
+
+force {SW[0]} 1
+force {SW[1]} 1
+
+run 10ns
+#
+force {KEY[0]} 1
+
+force {SW[0]} 1
+force {SW[1]} 1
+
+run 10ns
+#z=1 still
+force {KEY[0]} 0
+
+force {SW[0]} 1
+force {SW[1]} 0
+
+run 10ns
+#
+force {KEY[0]} 1
+
+force {SW[0]} 1
+force {SW[1]} 0
+
+run 10ns
+#breaking the loop should return it to state E, LEDR[3:0] = 1110
+force {KEY[0]} 0
+
+force {SW[0]} 1
+force {SW[1]} 1
+
+run 10ns
+#
+force {KEY[0]} 1
+
+force {SW[0]} 1
+force {SW[1]} 1
+
+run 10ns
+#this is where it cuts out
+#z should now output 1 again because w= 1101
+force {KEY[0]} 0
+
+force {SW[0]} 0
+force{SW[1]} 0
+
+run 10ns
+#
+force {KEY[0]} 1
+
+force {SW[0]} 0
+force {SW[1]} 0
+
+run 10ns
+#testing reset
+force {KEY[0]} 0
+
+force {SW[0]} 0
+force {SW[1]} 0
+
+run 10ns
+#
+force {KEY[0]} 1
+
+force {SW[0]} 0
+force {SW[1]} 0
+
+run 10ns

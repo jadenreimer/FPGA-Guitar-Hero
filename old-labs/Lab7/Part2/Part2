@@ -1,0 +1,145 @@
+# set the working dir, where all compiled verilog goes
+vlib work
+vlog fill.v
+vlog vga_adapter.v
+vsim -L altera_mf_ver fill -t ns
+
+#log all signals
+log {/*}
+# add all waves
+add wave {/*}
+
+#Begin simulation
+force {CLOCK_50} 0 0ns, 1 {5ns} -r 10ns
+force {KEY[0]} 0 0ns, 1 {10ns}
+force {KEY[1]} 1 0ns
+force {KEY[2]} 0 0ns, 1 {20ns}
+force {KEY[3]} 1 0ns
+force {SW[9]} 0 0ns
+force {SW[8]} 0 0ns
+force {SW[7]} 0 0ns
+force {SW[6]} 0 0ns
+force {SW[5]} 0 0ns
+force {SW[4]} 0 0ns
+force {SW[3]} 0 0ns
+force {SW[2]} 0 0ns
+force {SW[1]} 0 0ns
+force {SW[0]} 0 0ns
+run 20ns
+#		A.1.2 Input (1, 1, white)
+#			CLOCK
+force {CLOCK_50} 0 0ns, 1 {5ns} -r 10ns
+#			XVal: SW[6:0] = 7'b000_0001 (1)
+force {SW[6]} 0 0ns
+force {SW[5]} 0 0ns
+force {SW[4]} 0 0ns
+force {SW[3]} 0 0ns
+force {SW[2]} 0 0ns
+force {SW[1]} 0 0ns
+force {SW[0]} 1 0ns
+force {KEY[3]} 0 10ns, 1 20ns
+#			yVal: SW[6:0] = 7'b000_0001 (1)
+force {SW[6]} 0 20ns
+force {SW[5]} 0 20ns
+force {SW[4]} 0 20ns
+force {SW[3]} 0 20ns
+force {SW[2]} 0 20ns
+force {SW[1]} 0 20ns
+force {SW[0]} 1 20ns
+force {KEY[3]} 0 30ns, 1 40ns
+#			colour: SW[9:7] = 3'b111 (white)
+force {SW[9]} 1 40ns
+force {SW[8]} 1 40ns
+force {SW[7]} 1 40ns
+force {KEY[1]} 0 50ns, 1 60ns
+run 60ns
+#		A.2.1 Input (10, 10, red)
+#			CLOCK
+force {CLOCK_50} 0 0ns, 1 {5ns} -r 10ns
+#			XVal: SW[6:0] = 7'b000_1010 (10)
+force {SW[6]} 0 0ns
+force {SW[5]} 0 0ns
+force {SW[4]} 0 0ns
+force {SW[3]} 1 0ns
+force {SW[2]} 0 0ns
+force {SW[1]} 1 0ns
+force {SW[0]} 0 0ns
+force {KEY[3]} 0 10ns, 1 20ns
+#			yVal: SW[6:0] = 7'b000_1010 (10)
+force {SW[6]} 0 20ns
+force {SW[5]} 0 20ns
+force {SW[4]} 0 20ns
+force {SW[3]} 1 20ns
+force {SW[2]} 0 20ns
+force {SW[1]} 1 20ns
+force {SW[0]} 0 20ns
+force {KEY[3]} 0 30ns, 1 40ns
+#			colour: SW[9:7] = 3'b100 (red)
+force {SW[9]} 1 40ns
+force {SW[8]} 0 40ns
+force {SW[7]} 0 40ns
+force {KEY[1]} 0 50ns, 1 60ns
+run 60ns
+#		A.3.1 Input (100, 100, red)
+#			CLOCK
+force {CLOCK_50} 0 0ns, 1 {5ns} -r 10ns
+#			XVal: SW[6:0] = 7'b110_0100 (100)
+force {SW[6]} 1 0ns
+force {SW[5]} 1 0ns
+force {SW[4]} 0 0ns
+force {SW[3]} 0 0ns
+force {SW[2]} 1 0ns
+force {SW[1]} 0 0ns
+force {SW[0]} 0 0ns
+force {KEY[3]} 0 10ns, 1 20ns
+#			yVal: SW[6:0] = 7'b110_0100 (100)
+force {SW[6]} 1 20ns
+force {SW[5]} 1 20ns
+force {SW[4]} 0 20ns
+force {SW[3]} 0 20ns
+force {SW[2]} 1 20ns
+force {SW[1]} 0 20ns
+force {SW[0]} 0 20ns
+force {KEY[3]} 0 30ns, 1 40ns
+#			colour: SW[9:7] = 3'b010 (green)
+force {SW[9]} 0 40ns
+force {SW[8]} 1 40ns
+force {SW[7]} 0 40ns
+force {KEY[1]} 0 50ns, 1 60ns
+run 60ns
+#		A.4.1 clear_b
+force {CLOCK_50} 0 0ns, 1 {5ns} -r 10ns
+force {KEY[2]} 0 0ns, 1 10ns
+run 10ns
+#		A.5.1 Input (110, 125, blue)
+#			CLOCK
+force {CLOCK_50} 0 0ns, 1 {5ns} -r 10ns
+#			XVal: SW[6:0] = 7'b110_1110 (110)
+force {SW[6]} 1 0ns
+force {SW[5]} 1 0ns
+force {SW[4]} 0 0ns
+force {SW[3]} 1 0ns
+force {SW[2]} 1 0ns
+force {SW[1]} 1 0ns
+force {SW[0]} 0 0ns
+force {KEY[3]} 0 10ns, 1 20ns
+#			yVal: SW[6:0] = 7'b111_1101 (125)
+force {SW[6]} 1 20ns
+force {SW[5]} 1 20ns
+force {SW[4]} 1 20ns
+force {SW[3]} 1 20ns
+force {SW[2]} 1 20ns
+force {SW[1]} 0 20ns
+force {SW[0]} 1 20ns
+force {KEY[3]} 0 30ns, 1 40ns
+#			colour: SW[9:7] = 3'b001 (blue)
+force {SW[9]} 0 40ns
+force {SW[8]} 0 40ns
+force {SW[7]} 1 40ns
+force {KEY[1]} 0 50ns, 1 60ns
+run 60ns
+#		A.4.1 reset and clear_b
+force {CLOCK_50} 0 0ns, 1 {5ns} -r 10ns
+force {KEY[0]} 0 0ns, 1 10ns
+force {KEY[2]} 0 0ns, 1 20ns
+run 20ns

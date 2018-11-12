@@ -1,0 +1,110 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Jaden Reimer/Documents/ECE241/Lab6/Part2
+vcontrol
+Z1 !s110 1540922680
+!i10b 1
+!s100 IhIihLP@HT7ago;k51ARC3
+I4zN6[07@9HLI?7XZld?m53
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1540871304
+Z4 8fpga_top.v
+Z5 Ffpga_top.v
+L0 100
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1540922680.000000
+Z8 !s107 fpga_top.v|
+Z9 !s90 -reportprogress|300|fpga_top.v|
+!i113 1
+Z10 tCvgOpt 0
+vdatapath
+R1
+!i10b 1
+!s100 IbcI?NZVbb_Zcn6G4P_I^0
+I`H5DzoK^;F_P`GohYJWVZ3
+R2
+R0
+R3
+R4
+R5
+L0 223
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vfpga_top
+R1
+!i10b 1
+!s100 0ed]^]]NbWac1mH@Q;]IU2
+If]J480KlR4PRE7B;FA0gZ2
+R2
+R0
+R3
+R4
+R5
+L0 9
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vhex_decoder
+R1
+!i10b 1
+!s100 OM5lQ:BVed1c36hcgfo7b1
+IVC]d7:b1JmHKhX_E>ZTSB0
+R2
+R0
+R3
+R4
+R5
+L0 320
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vpart2
+R1
+!i10b 1
+!s100 ZEQn:GmC65[1bSO<TMeG^0
+IUY<b7UWkZmkO@[OCJImEb3
+R2
+R0
+R3
+R4
+R5
+L0 46
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
