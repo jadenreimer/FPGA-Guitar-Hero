@@ -235,7 +235,7 @@ module control(
 			S_DRAW: next_state = ~plot_in ? S_DRAW_WAIT : S_DRAW;
 			
 			S_DRAW_WAIT:
-					 
+			
 						 begin
 								if (add == 4'd15) begin
 									next_state = S_LOAD_X;
@@ -244,9 +244,7 @@ module control(
 									next_state = S_DRAW_WAIT;
 								end
 						 end
-				 
-				 
-					 
+				
             default:     next_state = S_LOAD_X;
         endcase
     end // state_table
