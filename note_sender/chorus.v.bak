@@ -1,0 +1,40 @@
+module expected_notes(input clk,
+									 t,
+							 output reg [4:0]exp_notes
+							 )
+							 
+	parameter BEAT = 10'd26315790;
+	always@(posedge clk)
+	begin
+		case(t)
+			BEAT:
+				exp_notes <= 5'b00101;
+			2*BEAT:
+				exp_notes <= 5'b01010;
+			3*BEAT:
+				exp_notes <= 5'b10100;
+			4.5*BEAT:
+				exp_notes <= 5'b00101;
+			5.5*BEAT:
+				exp_notes <= 5'b01010;
+			6.5*BEAT:
+				exp_notes <= 5'b11000;
+			7*BEAT:
+				exp_notes <= 5'b10100;
+			9*BEAT:
+				exp_notes <= 5'b00101;
+			10*BEAT:
+				exp_notes <= 5'b01010;
+			11*BEAT:
+				exp_notes <= 5'b10100;
+			12.5*BEAT:
+				exp_notes <= 5'b01010;
+			13.5*BEAT:
+				exp_notes <= 5'b00101;
+				
+			default: exp_notes <= 5'b00000;
+			
+		endcase
+	end
+endmodule
+
