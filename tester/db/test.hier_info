@@ -1,0 +1,66 @@
+|test
+LEDR[0] <= chorus:chr.exp_notes
+LEDR[1] <= chorus:chr.exp_notes
+LEDR[2] <= chorus:chr.exp_notes
+LEDR[3] <= chorus:chr.exp_notes
+LEDR[4] <= chorus:chr.exp_notes
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+CLOCK_50 => CLOCK_50.IN2
+
+
+|test|chorus:chr
+clk => exp_notes[0]~reg0.CLK
+clk => exp_notes[1]~reg0.CLK
+clk => exp_notes[2]~reg0.CLK
+clk => exp_notes[3]~reg0.CLK
+clk => exp_notes[4]~reg0.CLK
+clk => t[0].CLK
+clk => t[1].CLK
+clk => t[2].CLK
+clk => t[3].CLK
+clk => t[4].CLK
+eight_beat => t[0].ENA
+eight_beat => t[1].ENA
+eight_beat => t[2].ENA
+eight_beat => t[3].ENA
+eight_beat => t[4].ENA
+exp_notes[0] <= exp_notes[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+exp_notes[1] <= exp_notes[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+exp_notes[2] <= exp_notes[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+exp_notes[3] <= exp_notes[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+exp_notes[4] <= exp_notes[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|test|eight_beat_gen:rate_driver
+clk => eight_beat~reg0.CLK
+clk => t[0].CLK
+clk => t[1].CLK
+clk => t[2].CLK
+clk => t[3].CLK
+clk => t[4].CLK
+clk => t[5].CLK
+clk => t[6].CLK
+clk => t[7].CLK
+clk => t[8].CLK
+clk => t[9].CLK
+clk => t[10].CLK
+clk => t[11].CLK
+clk => t[12].CLK
+clk => t[13].CLK
+clk => t[14].CLK
+clk => t[15].CLK
+clk => t[16].CLK
+clk => t[17].CLK
+clk => t[18].CLK
+clk => t[19].CLK
+clk => t[20].CLK
+clk => t[21].CLK
+clk => t[22].CLK
+clk => t[23].CLK
+eight_beat <= eight_beat~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
