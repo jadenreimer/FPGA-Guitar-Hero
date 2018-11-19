@@ -1,40 +1,6 @@
 `timescale 1ns / 1ns
 
-//module rate_driver(clk, enable_in, enable_out);
-//	
-//	input clk;
-//	input enable_in; // Telling it to be on or off
-//	output reg enable_out; // Output to counter once value reached
-//	
-//	reg [25:0] rateDriver;
-//	
-//	always @(posedge clk) // triggered every time clk rises
-//	begin
-//		//no 'assign' in always blocks
-//		enable_out <= (rateDriver == 26'd0) ? 1 : 0; //yo make sure you change the apostrophe
-//
-//		if (enable_in == 1) // when q is the maximum value for the counter
-//			rateDriver <= 26'b00101111101011110000100000; // q reset to the upper value of counting (4 Hz)
-//		else
-//			rateDriver <= rateDriver - 1;
-//	end
-//	
-//endmodule
-
-
-
-module rate_driver(input clk, output reg new_clk); // Not sure if this works
-
-	reg [15:0] count;
-	
-	always @(posedge clk)
-		{new_clk, count} <= count + 16'h8000;
-	
-endmodule
-
-
-
-module drop-keys
+module drop_keys
 	(
 		CLOCK_50,						//	On Board 50 MHz
 		// Your inputs and outputs here
@@ -48,13 +14,18 @@ module drop-keys
 		VGA_SYNC_N,						//	VGA SYNC
 		VGA_R,   						//	VGA Red[9:0]
 		VGA_G,	 						//	VGA Green[9:0]
-		VGA_B	   						//	VGA Blue[9:0]
+		VGA_B,   						//	VGA Blue[9:0]
+		HEX0,
+		HEX1,
+		HEX2,
+		HEX3,
+		HEX4,
+		HEX5
 	);
 
 	input	CLOCK_50;				//	50 MHz
 	input [3:0]	KEY;
 	input [9:0] SW;
-	
 	// Declare your inputs and outputs here
 	// Do not change the following outputs
 	output			VGA_CLK;   				//	VGA Clock
@@ -66,46 +37,58 @@ module drop-keys
 	output	[7:0]	VGA_G;	 				//	VGA Green[7:0]
 	output	[7:0]	VGA_B;   				//	VGA Blue[7:0]
 	
-	wire resetn;
-//	wire erase;
-	wire [4:0] pos_in;
-	wire load_in;
-//	wire [2:0] rate_drive;
+	output [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5;
 	
-	assign resetn = KEY[2];
-//	assign erase = KEY[3];
-	assign pos_in = SW[4:0];
-	assign load_in = KEY[0];
-//	assign rate_drive = SW[9:7];
+	hex_decoder xSig(x_out[7:4], HEX5);
+	hex_decoder xMin(x_out[3:0], HEX4);
+	
+	hex_decoder ySig({1'b0, y_out[6:4]}, HEX3);
+	hex_decoder yMin(y_out[3:0], HEX2);
+	
+	hex_decoder cSig(4'd0, HEX1);
+	hex_decoder cMin({5'd0, colour_out[2:0]}, HEX0);
+	
+	wire resetn, black, plot_in, go;
+	
+	wire [3:0] add_up;
+	
+	assign resetn = KEY[0];
+	assign black = ~KEY[2];
+	assign plot_in = ~KEY[1];
+	assign go = ~KEY[3];
 	
 	// Create the colour, x, y and writeEn wires that are inputs to the controller.
 
-	wire [2:0] vga_colour;
-	wire [7:0] vga_x;
-	wire [6:0] vga_y;
+	wire [2:0] colour_out;
+	wire [7:0] x_out;
+	wire [6:0] y_out;
 	wire plot_out; // = wrtieEn
-	
-	rate_driver(.clk(CLOCK_50), .new_clk(plot_out) ); // plot_out might need to be a reg
 
-	
+			
+	// Put your code here. Your code should produce signals x,y,colour and writeEn
+	// for the VGA controller, in addition to any other functionality your design may require.
 	
 	FSM ctrl(
 	
 		// Standard I/O
 		.clk(CLOCK_50),
 		.resetn(resetn),
-//		.erase(erase),
 		
-		.pos_in(pos_in),
-		.load_in(load_in),
-		.rate_drive(plot_out),
-		.writeEn(),
-		.drawEn(),
+		// State change functionality
+		.plot_in(plot_in), // Can I just make this the ~KEY[1] input?
+		.black(black),
+		.go(go),
+
+		// Input to registers
+		.colour_in(SW[9:7]),
+		.pos_in(SW[6:0]),
 		
 		// Outputs, my lad
 		.x_reg(x_out),
 		.y_reg(y_out),
 		.colour_reg(colour_out),
+		.plot(plot_out),
+		.add_up(add_up)
 	);
 	
 	
@@ -130,7 +113,7 @@ module drop-keys
 			.VGA_SYNC(VGA_SYNC_N),
 			.VGA_CLK(VGA_CLK));
 			
-		defparam VGA.RESOLUTION = "160x120";
+		defparam VGA.RESOLUTION = "320x240";
 		defparam VGA.MONOCHROME = "FALSE";
 		defparam VGA.BITS_PER_COLOUR_CHANNEL = 1;
 		defparam VGA.BACKGROUND_IMAGE = "black.mif";
@@ -139,67 +122,66 @@ endmodule
 
 
 
-module FSM(				
+module FSM(
 		
 		// Standard I/O
 		input clk,
 		input resetn,
-//		input erase,
+		input plot_in,
+		input black,
+		input go,
 		
 		//Input to registers
-		input [4:0] pos_in,
-		input load_in,
-		input rate_driver,
-		input writeEn,
-		input drawEn,
+		input [2:0] colour_in,
+		input [6:0] pos_in,
 		
 		//Outputs, my lad
 		output [7:0] x_reg,
 		output [6:0] y_reg,
 		output [2:0] colour_reg,
+		output plot,
+		output reg [3:0] add_up
 );
 		
 		
-		
-		wire [3:0] add_from_data;
+		wire x_init, y_init, colour_init, drawEnable;
+
 		wire [2:0] x, y, colour;
 		
 		wire [3:0] add;
+	
+		always@(*) add_up = add;
 		
 		// output reg plot, enable, x_init, y_colour_init
-		rate_driver mvEN(.clk(CLOCK_50),
-							  .enable_in(1'b1),
-							  .enable_out(moveEN)
-							  );
+		control C0(
 		
-	 	control C0(
-		
-		// Edit this
 		  .clk(clk),
-		  .move_enable(moveEN),
-		  .add_in(add),
-		  
-		  .add(add),
-		  .eraseEN(eraseEN),
-		  .incEN(incEN),
-		  .drawEN(drawEN)
+		  .resetn(resetn),
+		  .go(go),
+		  .plot_in(plot_in), // what are each of these 'writeEn's doing?
+		  .x_init(x_init),
+		  .y_init(y_init),
+		  .colour_init(colour_init),
+		  .drawEnable(drawEnable),
+		  .add(add)
 		  
 		);
-	 
+				
 		datapath D0(
 		
-		  .clk(CLOCK_50),
+		  .clk(clk),
+		  .resetn(resetn),
+		  .black(black),
 		  .add(add),
-		  .move_enable(moveEN),
+		  .enable(writeEn),
 		  
-		  .drawEN(drawEN),
-		  .eraseEN(eraseEN),
-		  .incEN(incEN),
+		  .x_init(x_init), // add stuff here
+		  .y_init(y_init),
+		  .colour_init(colour_init),
+		  .drawEnable(drawEnable),
 		  
-		  .pos_in(7'b0),
+		  .pos_in(pos_in),
 		  .colour_in(colour_in),
-		  .x_curr(x_reg),
-		  .y_curr(y_reg),
 		  
 		  .x_out(x_reg),
 		  .y_out(y_reg),
@@ -207,31 +189,34 @@ module FSM(
 		  .plot_out(plot)
 		  
 		); 
-
-endmodule
-
+					 
+endmodule        
+		  
 
 
 module control(
     input clk,
-	 input [3:0] add_from_data,
-	 input load_in
-	 input rate_driver,
+    input resetn,
+    input go,
+	 input plot_in,
 	 
-	 output reg [3:0] add_from_control,
-	 output reg eraseEN, drawEN, loadEn, incEn, clearRegs;
+	 output reg x_init,
+	 output reg y_init,
+	 output reg colour_init,
+	 output reg drawEnable,
+	 output reg [3:0] add
 	 
 );
 
     reg [2:0] current_state, next_state;
 	 reg adder;
 	 
-	localparam  LOAD_IN 		= 3'd0,
-               DRAW 			= 3'd1,
-               WAIT 			= 3'd2,
-               ERASE_NOTE 	= 3'd3,
-					INC 			= 3'd4,
-					ERASE 		= 3'd5;
+	localparam  S_LOAD_X				= 3'd0,
+               S_LOAD_x_WAIT		= 3'd1,
+               S_LOAD_Y				= 3'd2,
+               S_LOAD_Y_WAIT		= 3'd3,
+					S_DRAW				= 3'd4,
+               S_DRAW_WAIT			= 3'd5;
 					
 	// Next state logic aka our state table
    always@(*)
@@ -239,108 +224,88 @@ module control(
 		adder = 1'd0;
 	
 		case (current_state)
-		
-			LOAD_IN: next_state = load_in ? DRAW : LOAD_IN;
+			S_LOAD_X: next_state = go ? S_LOAD_x_WAIT : S_LOAD_X;
 			
-			DRAW:
+			S_LOAD_x_WAIT: next_state = ~go ? S_LOAD_Y : S_LOAD_x_WAIT;
 			
-			begin
-				if (add_from_data == 4'd15) begin
-					next_state = WAIT;
-				end else begin
-					adder = 1'b1; // Off-by-one error?
-					next_state = DRAW;
-				end	
-			end
+			S_LOAD_Y: next_state = go ? S_LOAD_Y_WAIT : S_LOAD_Y;
 			
-			WAIT: next_state = rate_driver ? ERASE : WAIT;
+			S_LOAD_Y_WAIT: next_state = plot_in ? S_DRAW : S_LOAD_Y_WAIT;
 			
-			ERASE_NOTE:
+			S_DRAW: next_state = ~plot_in ? S_DRAW_WAIT : S_DRAW;
 			
-			begin
-				if (add_from_data == 4'd15) begin
-					next_state = INC;
-				end else begin
-					adder = 1'b1; // Off-by-one error?
-					next_state = ERASE_NOTE;
-				end	
-			end
+			S_DRAW_WAIT:
 			
-			INC: next_state = DRAW; // How do we avoid propagation delays here?
-			
-			ERASE:
-			
-			begin
-				if (add_from_data == 4'd15) begin
-					next_state = ERASE;
-				end else begin
-					adder = 1'b1; // Off-by-one error?
-					next_state = LOAD;
-				end	
-			end
-				 
-			default: next_state = LOAD;
-						
+						 begin
+								if (add == 4'd15) begin
+									next_state = S_LOAD_X;
+								end else begin
+									adder = 1'b1;
+									next_state = S_DRAW_WAIT;
+								end
+						 end
+				
+            default:     next_state = S_LOAD_X;
         endcase
     end // state_table
    
 
-	// Output logic aka all of our datapath control signals
-	always @(*)
-	begin: enable_signals
-	
-	loadEn = 1'b1;
-	drawEn = 1'b0;
-	eraseEn = 1'b0;
-	incEn = 1'b0;
-	clearRegs = 1'b0;
-
-		case (current_state)
+    // Output logic aka all of our datapath control signals
+    always @(*)
+    begin: enable_signals
+        // By default make all our signals 0 to avoid latches.
+        // This is a different style from using a default statement.
+        // It makes the code easier to read.  If you add other out
+        // signals be sure to assign a default value for them here.
 			
-            LOAD_IN: begin
-					loadEn = 1'b1;
-				end
-				
-				DRAW: begin
-					drawEn = 1'b1;
-				end
-				
-				ERASE_NOTE: begin
-					eraseEn = 1'b1;
-				end
-				
-				INC: begin
-					incEn = 1'b1;
-				end
-				
-				ERASE: begin
-					clearRegs = 1'b1;
-				end
+		  x_init = 1'b0;
+		  y_init = 1'b0;
+		  colour_init = 1'b0;
+		  drawEnable = 1'b0;
+
+        case (current_state)
+			
+            S_LOAD_X: begin
+                x_init = 1'b1;
+                end
+            S_LOAD_Y: begin
+                y_init = 1'b1;
+                end
+            S_DRAW: begin
+					 colour_init = 1'b1;
+                end
+				S_DRAW_WAIT: begin
+					 drawEnable = 1'b1;
+					 end
  
 			endcase
-    end 
+    end // enable_signals
    
+    // current_state registers
     always@(posedge clk)
     begin: state_FFs
-		if ( (current_state == DRAW) || (current_state == ERASE_NOTE) || (current_state == ERASE) ) add_from_control <= add_from_control + adder;
-		else if (add_from_control == 4'd15)	add_from_control <= 4'd0;
-		
-		current_state <= next_state;
-	 end
-
+        if(~resetn)
+		  begin
+            current_state <= S_LOAD_X; // Should this be next_state? Does it matter at all?
+				add <= 4'd0;
+        end else begin
+			if (current_state == S_DRAW_WAIT) add <= add + adder; // Sound logic I think?
+			else if (add == 4'd15) 		 add <= 4'd0;
+			current_state <= next_state;
+		end
+	end // state_FFS
 endmodule
 
 
 
 module datapath(
 
-    input clk,
+    input clk, resetn, black, 
 	 input [3:0] add,
-	 input drawEN, eraseEN, incEN,
-	 input [4:0] pos_in,
+	 input enable,
+	 input x_init, y_init, colour_init, drawEnable,
+	 input [6:0] pos_in,
 	 input [2:0] colour_in,
-	 input [7:0] x_curr,
-	 input [6:0] y_curr,
 	 
 	 output reg [7:0] x_out,
 	 output reg [6:0] y_out,
@@ -350,107 +315,18 @@ module datapath(
     );
     
     // input registers
-	 reg [9:0] green_register;
-	 reg [9:0] red_register;
-	 reg [9:0] yellow_register;
-	 reg [9:0] blue_register;
-	 reg [9:0] orange_register;
-	 reg [7:0] x_pos;
-//loadEn
-//drawEn
-//eraseEn
-//incEn
-//clearRegs
-	 
-	 always @(posedge loadEn)
-	 begin
-		case (pos_in)
-			
-			5'b10000:
-			begin
-				green_register <= {3'b010, 7'd0};
-				x_pos[7:0] = ;
-			end
-			5'b01000:
-			begin
-				red_register <= {3'b100, 7'd0};
-				x_pos[7:0] = ;
-			end
-			5'b00100:
-			begin
-				yellow_register <= {3'b110, 7'd0}; // actually red + green
-				x_pos[7:0] = ;
-			end
-			5'b00010:
-			begin
-				blue_register <= {3'b001, 7'd0};
-				x_pos[7:0] = ;
-			end
-			5'b00001:
-			begin
-				orange_register <= {3'b101, 7'd0}; // actually purple
-				x_pos[7:0] = ;
-			end
-			
-		endcase
-	 end
-	 
-	 
-	 
-    always@(posedge drawEn) begin
-		if (incEN)
-			begin
-					if(green_register[9:7] == 3'b010)
-						green_register[6:0] <= green_register[6:0] + 1;
-				
-					if(red_register[9:7] == 3'b100)
-						red_register[6:0] <= red_register[6:0] + 1;	
-					
-					if(yellow_register[9:7] == 3'b110)
-						yellow_register[6:0] <= yellow_register[6:0] + 1;
-				
-					if(blue_register[9:7] == 3'b001)
-						blue_register[6:0] <= blue_register[6:0] + 1;
-						
-					if(orange_register[9:7] == 3'b101)
-						orange_register[6:0] <= orange_register[6:0] + 1;
-			end
-				
-				if(drawEN) begin
-				
-					
-					//plot_out <= 1'd1;
-					
-				end
-				
-				//else plot_out <= 1'd0;
-				
-				if(eraseEN) begin
-				
-					x_out <= x_curr + (add % 4);
-					y_out <= y_register + (add / 4);
-					colour_out <= 3'b0;
-					//plot_out <= 1'd1;
-					
-				end
-				
-				//else plot_out <= 1'd0;
-				
-   end
- 
-	always @(posedge rate_driver) plot_out <= 1'b1;
-	
-	
-	
-	
-	
-	 
+	 reg [7:0] x_register;
+	 reg [6:0] y_register;
+	 reg [2:0] colour_register;
+	 reg [14:0] black_out_the_sky;
+	 	
     // Registers a, b, c, x with respective input logic
     always@(posedge clk) begin
         if(~resetn) begin
             x_register <= 8'b0;
             y_register <= 7'b0;
             colour_register <= 3'b0;
+				y_drop <= 0;
         end
         else 
 		  begin
@@ -463,9 +339,22 @@ module datapath(
         end
     end
  
+	reg [6:0] drop_y = 7'd0;
+	
+	reg eight_beat;
+ 
+	eight_beat_gen rate(clk, eight_beat);
+	
+	draw_sprite draw(x_register, add, (y_register + y_drop), drawEnable, colour_register, x_out, y_out[6:0], colour_out);
+	draw_sprite erase(x_register, add, (y_register + y_drop), eight_beat, 3'd0, x_out, y_out[6:0], 3'd0);
+	
     // Output result register
     always@(posedge clk) begin
 	 
+        if(~resetn) begin
+				black_out_the_sky <= 15'd0;
+        end
+		  
 		  if(black || (black_out_the_sky != 15'd0) )
 		  begin
 			  if(black_out_the_sky == 19199)	black_out_the_sky <= 15'd0; // If the screen has gone through every pixel ie. 120*160-1
@@ -475,36 +364,54 @@ module datapath(
 				y_out <= black_out_the_sky % 120; // Remainder of the rows denotes the y location
 				plot_out <= 1'd1; // Call to plot every time we change a pixel
 			end else begin
+				
 				if(drawEnable) begin
-				// Same principal here except we're drawing normally
-					x_out <= x_register + (add % 4); // X location
-					y_out <= y_register + (add / 4); // Y location
-					colour_out <= colour_register;
-					plot_out <= 1'd1;
-				end else plot_out <= 1'd0;
+					y_drop <= y_drop + 1;
+				end
 			end
 		end
 				
+    
+endmodule
+
+
+
+module eight_beat_gen(input clk, output reg eight_beat);
 	
+	parameter EIGHTH_NOTE = 25'd26315790;
 	
+	reg [24:0] t = 25'd0;
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	always@(posedge clk)
+	begin
+		if (t == EIGHTH_NOTE)
+		begin
+			t <= 25'd0;
+			eight_beat <= 1'b1;
+		end
+		
+		else
+		begin
+			t <= t+1;
+			eight_beat <= 1'b0;
+		end
+			
+	end
+
+endmodule
+
+
+
+module draw_sprite(input [7:0] x_register, input [3:0] add, input [6:0] y_register, input enable, input [2:0] colour_register, output reg [7:0] x_out, output reg y_out[6:0], output reg [2:0] colour_out);
+		
+		if(enable) begin
+		
+		x_out <= x_register + (add % 4); // X location
+			y_out <= y_register + (add / 4); // Y location
+			colour_out <= colour_register;
+			if(add == 4'b1111) plot_out <= 1'd1; // Risky
+		end else plot_out <= 1'd0;
+		
 endmodule
 
 

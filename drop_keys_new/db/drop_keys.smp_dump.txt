@@ -1,0 +1,8 @@
+
+State Machine - |drop_keys|control:myControl|current_state
+Name current_state.WAIT current_state.DRAW current_state.DEC_REG current_state.MAIN current_state.ERASE 
+current_state.MAIN 0 0 0 0 0 
+current_state.DEC_REG 0 0 1 1 0 
+current_state.DRAW 0 1 0 1 0 
+current_state.WAIT 1 0 0 1 0 
+current_state.ERASE 0 0 0 1 1 

@@ -102,14 +102,14 @@ module vga_adapter(
 	/* Set this parameter to "TRUE" if you only wish to use black and white colours. Doing so will reduce
 	 * the amount of memory you will use by a factor of 3. */
 	
-	parameter RESOLUTION = "320x240";
+	parameter RESOLUTION = "160x120";
 	/* Set this parameter to "160x120" or "320x240". It will cause the VGA adapter to draw each dot on
 	 * the screen by using a block of 4x4 pixels ("160x120" resolution) or 2x2 pixels ("320x240" resolution).
 	 * It effectively reduces the screen resolution to an integer fraction of 640x480. It was necessary
 	 * to reduce the resolution for the Video Memory to fit within the on-chip memory limits.
 	 */
 	
-	parameter BACKGROUND_IMAGE = "background.mif";
+	parameter BACKGROUND_IMAGE = "black.mif";
 	/* The initial screen displayed when the circuit is first programmed onto the DE2 board can be
 	 * defined useing an MIF file. The file contains the initial colour for each pixel on the screen
 	 * and is placed in the Video Memory (VideoMemory module) upon programming. Note that resetting the

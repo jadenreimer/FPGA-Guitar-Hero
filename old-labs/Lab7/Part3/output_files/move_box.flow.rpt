@@ -1,5 +1,5 @@
 Flow report for move_box
-Wed Nov 07 12:08:33 2018
+Fri Nov 16 02:01:58 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Nov 07 12:08:21 2018       ;
+; Flow Status                     ; Successful - Fri Nov 16 02:01:44 2018       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; move_box                                    ;
-; Top-level Entity Name           ; move_box                                    ;
+; Top-level Entity Name           ; vga_animation                               ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 26 / 32,070 ( < 1 % )                       ;
-; Total registers                 ; 34                                          ;
+; Logic utilization (in ALMs)     ; 126 / 32,070 ( < 1 % )                      ;
+; Total registers                 ; 133                                         ;
 ; Total pins                      ; 44 / 457 ( 10 % )                           ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 57,600 / 4,065,280 ( 1 % )                  ;
+; Total block memory bits         ; 230,400 / 4,065,280 ( 6 % )                 ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -67,27 +67,28 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/07/2018 12:06:14 ;
+; Start date & time ; 11/16/2018 01:59:52 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; move_box            ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                        ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 112660123458440.154161037408340        ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                          ;
++-------------------------------------+----------------------------------------+---------------+---------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name   ; Section Id ;
++-------------------------------------+----------------------------------------+---------------+---------------+------------+
+; COMPILER_SIGNATURE_ID               ; 112660123458440.154235159106300        ; --            ; --            ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --            ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --            ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; vga_animation ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; vga_animation ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; vga_animation ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --            ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --            ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --            ; --         ;
+; TOP_LEVEL_ENTITY                    ; vga_animation                          ; move_box      ; --            ; --         ;
++-------------------------------------+----------------------------------------+---------------+---------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -95,11 +96,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:32     ; 1.0                     ; 4834 MB             ; 00:00:59                           ;
-; Fitter               ; 00:01:20     ; 1.0                     ; 6328 MB             ; 00:01:59                           ;
-; Assembler            ; 00:00:11     ; 1.0                     ; 4844 MB             ; 00:00:11                           ;
-; Timing Analyzer      ; 00:00:11     ; 1.0                     ; 5148 MB             ; 00:00:11                           ;
-; Total                ; 00:02:14     ; --                      ; --                  ; 00:03:20                           ;
+; Analysis & Synthesis ; 00:00:23     ; 1.0                     ; 4827 MB             ; 00:00:49                           ;
+; Fitter               ; 00:01:16     ; 1.0                     ; 6367 MB             ; 00:02:04                           ;
+; Assembler            ; 00:00:11     ; 1.0                     ; 4874 MB             ; 00:00:11                           ;
+; Timing Analyzer      ; 00:00:12     ; 1.2                     ; 5181 MB             ; 00:00:14                           ;
+; Total                ; 00:02:02     ; --                      ; --                  ; 00:03:18                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

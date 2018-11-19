@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed Nov 07 02:45:21 2018
+Analysis & Synthesis Status : Successful - Tue Nov 13 22:25:04 2018
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : vga_adapter
 Top-level Entity Name : fill
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 91
+Total registers : 95
 Total pins : 86
 Total virtual pins : 0
-Total block memory bits : 57,600
+Total block memory bits : 230,400
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

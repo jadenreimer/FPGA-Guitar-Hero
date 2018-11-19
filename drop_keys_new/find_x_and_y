@@ -1,0 +1,29 @@
+# set the working dir, where all compiled verilog goes
+vlib work
+vlog drop_keys.v
+vlog vga_adapter.v
+vsim -L altera_mf_ver find_x_and_y -t ns
+
+#log all signals
+log {/*}
+# add all waves
+add wave {/*}
+
+
+force {clk} 0 0ns, 1 {5ns} -r 10ns
+force {from_register} 00111 0ns
+force {x_location} 000 10ns, 001 20ns, 010 30ns, 011 40ns, 100 50ns 
+force {y_location} 00110 0ns
+run 60 ns
+
+force {clk} 0 0ns, 1 {5ns} -r 10ns
+force {from_register} 10001 0ns
+force {x_location} 000 10ns, 001 20ns, 010 30ns, 011 40ns, 100 50ns 
+force {y_location} 11111 0ns
+run 60 ns
+
+# Stock formats
+#force {}  ns, 1 {20ns}
+#force {}  ns,  ns
+#force {}  ns
+#run ns

@@ -1,0 +1,21 @@
+# set the working dir, where all compiled verilog goes
+vlib work
+vlog drop_keys.v
+vlog vga_adapter.v
+vsim -L altera_mf_ver rate_driver -t ns
+
+#log all signals
+log {/*}
+# add all waves
+add wave {/*}
+
+
+force {clk} 0 0ns, 1 {5ns} -r 10ns
+run 200 ns
+
+
+# Stock formats
+#force {}  ns, 1 {20ns}
+#force {}  ns,  ns
+#force {}  ns
+#run ns

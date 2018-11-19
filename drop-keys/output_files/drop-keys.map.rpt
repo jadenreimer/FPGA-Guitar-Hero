@@ -1,5 +1,5 @@
 Analysis & Synthesis report for drop-keys
-Mon Nov 12 20:29:17 2018
+Wed Nov 14 01:54:14 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,10 +36,10 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Mon Nov 12 20:29:17 2018           ;
+; Analysis & Synthesis Status ; Failed - Wed Nov 14 01:54:14 2018           ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; drop-keys                                   ;
-; Top-level Entity Name       ; drop-keys                                   ;
+; Top-level Entity Name       ; drop_keys                                   ;
 ; Family                      ; Cyclone V                                   ;
 ; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
 ; Total registers             ; N/A until Partition Merge                   ;
@@ -57,7 +57,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; drop-keys          ; drop-keys          ;
+; Top-level entity name                                                           ; drop_keys          ; drop-keys          ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -160,18 +160,28 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Nov 12 20:28:57 2018
+    Info: Processing started: Wed Nov 14 01:53:56 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off drop-keys -c drop-keys
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 2 design units, including 2 entities, in source file drop-keys.v
-    Info (12023): Found entity 1: SRAM File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop-keys/drop-keys.v Line: 22
-    Info (12023): Found entity 2: hexDecoder File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop-keys/drop-keys.v Line: 39
-Error (12007): Top-level design entity "drop-keys" is undefined
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 4785 megabytes
-    Error: Processing ended: Mon Nov 12 20:29:17 2018
-    Error: Elapsed time: 00:00:20
-    Error: Total CPU time (on all processors): 00:00:46
+Info (12021): Found 1 design units, including 1 entities, in source file vga_pll.v
+    Info (12023): Found entity 1: vga_pll File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop-keys/vga_pll.v Line: 36
+Info (12021): Found 1 design units, including 1 entities, in source file vga_controller.v
+    Info (12023): Found entity 1: vga_controller File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop-keys/vga_controller.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file vga_address_translator.v
+    Info (12023): Found entity 1: vga_address_translator File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop-keys/vga_address_translator.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file vga_adapter.v
+    Info (12023): Found entity 1: vga_adapter File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop-keys/vga_adapter.v Line: 78
+Error (10170): Verilog HDL syntax error at drop-keys.v(407) near text: "if";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop-keys/drop-keys.v Line: 407
+Error (10112): Ignored design unit "draw_sprite" at drop-keys.v(405) due to previous errors File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop-keys/drop-keys.v Line: 405
+Error (10112): Ignored design unit "hex_decoder" at drop-keys.v(419) due to previous errors File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop-keys/drop-keys.v Line: 419
+Info (12021): Found 0 design units, including 0 entities, in source file drop-keys.v
+Info (12021): Found 1 design units, including 1 entities, in source file green.v
+    Info (12023): Found entity 1: green File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop-keys/green.v Line: 39
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 1 warning
+    Error: Peak virtual memory: 4786 megabytes
+    Error: Processing ended: Wed Nov 14 01:54:15 2018
+    Error: Elapsed time: 00:00:19
+    Error: Total CPU time (on all processors): 00:00:43
 
 

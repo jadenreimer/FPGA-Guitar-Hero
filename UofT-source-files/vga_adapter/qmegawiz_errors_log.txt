@@ -1,0 +1,19 @@
+
+
+C:/Users/Jaden Reimer/Documents/GitHub/241-project/UofT-source-files/vga_adapter/vga_pll.v
+
+Nov 13 09PM:32:04>: Error in CNX file format.
+
+Error messages are listed in file
+C:/Users/Jaden Reimer/Documents/GitHub/241-project/UofT-source-files/vga_adapter/vga_pll.cnxerr.
+
+Can't create the custom megafunction variation file(s)
+
+C:/Users/Jaden Reimer/Documents/GitHub/241-project/UofT-source-files/vga_adapter/vga_pll.v
+
+Nov 13 09PM:40:12>: Error in CNX file format.
+
+Error messages are listed in file
+C:/Users/Jaden Reimer/Documents/GitHub/241-project/UofT-source-files/vga_adapter/vga_pll.cnxerr.
+
+Can't create the custom megafunction variation file(s)

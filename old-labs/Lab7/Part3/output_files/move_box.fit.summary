@@ -1,16 +1,16 @@
-Fitter Status : Successful - Wed Nov 07 12:08:07 2018
+Fitter Status : Successful - Fri Nov 16 02:01:31 2018
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : move_box
-Top-level Entity Name : move_box
+Top-level Entity Name : vga_animation
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 26 / 32,070 ( < 1 % )
-Total registers : 34
+Logic utilization (in ALMs) : 126 / 32,070 ( < 1 % )
+Total registers : 133
 Total pins : 44 / 457 ( 10 % )
 Total virtual pins : 0
-Total block memory bits : 57,600 / 4,065,280 ( 1 % )
-Total RAM Blocks : 8 / 397 ( 2 % )
+Total block memory bits : 230,400 / 4,065,280 ( 6 % )
+Total RAM Blocks : 29 / 397 ( 7 % )
 Total DSP Blocks : 0 / 87 ( 0 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

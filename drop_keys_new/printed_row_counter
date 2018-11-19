@@ -1,0 +1,28 @@
+# set the working dir, where all compiled verilog goes
+vlib work
+vlog drop_keys.v
+vlog vga_adapter.v
+vsim -L altera_mf_ver printed_row_counter -t ns
+
+#log all signals
+log {/*}
+# add all waves
+add wave {/*}
+
+
+force {clk} 0 0ns, 1 {5ns} -r 10ns
+force {reset} 1 10ns, 0 20ns
+force {plotted_row} 0 0ns, 1 10ns, 0 80ns, 1 200ns
+run 400 ns
+
+force {clk} 0 0ns, 1 {5ns} -r 10ns
+force {reset} 1 10ns, 0 20ns, 1 240ns
+force {plotted_row} 0 0ns, 1 10ns, 0 380ns
+run 400 ns
+
+
+# Stock formats
+#force {}  ns, 1 {20ns}
+#force {}  ns,  ns
+#force {}  ns
+#run ns
