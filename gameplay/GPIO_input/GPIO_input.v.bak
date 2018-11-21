@@ -1,0 +1,3 @@
+module GPIO_input(input [35:0] GPIO_0, output [9:0] LEDR);
+		assign LEDR[4:0] = GPIO_0[4:0]
+endmodule

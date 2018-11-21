@@ -1,0 +1,54 @@
+module gameplay(
+					 input CLOCK_50,
+					 input [4:0] buttons,
+					 input strummer,
+					 input [4:0] exp_notes,
+					 
+					 output note_hit
+					 );
+	
+	reg [4:0] key_in;
+	
+	//FSM for loading in buttons with immediate clear
+	//---------------------------------------------------|
+	parameter WAIT_FOR_STRUM = 3'b001;
+	parameter LOAD = 3'b010;
+	parameter CLEAR = 3'b100;
+	
+	reg [2:0] current_state;
+	reg [2:0] next_state;
+	
+	always @(posedge CLOCK_50)
+	begin
+		case(current_state)
+		WAIT_FOR_STRUM:
+			if (strummer) next_state <= LOAD;
+			
+		LOAD:
+			next_state <= CLEAR;
+		
+		CLEAR:
+			if (~strummer) next_state <= WAIT_FOR_STRUM;
+			
+		default: next_state <= CLEAR;
+		endcase
+	end
+	
+	always @(posedge CLOCK_50)
+	begin
+		case(current_state)
+		WAIT_FOR_STRUM: key_in <= 5'b00000;
+			
+		LOAD: key_in <= buttons;
+		
+		CLEAR: key_in <= 5'b00000;
+
+		endcase
+		
+		current_state <= next_state;
+	end
+	//---------------------------------------------------|
+	
+	
+	
+endmodule

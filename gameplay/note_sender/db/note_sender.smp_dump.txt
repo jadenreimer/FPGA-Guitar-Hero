@@ -1,0 +1,12 @@
+
+State Machine - |note_sender|current_state
+Name current_state.pcr current_state.vrs current_state.chr 
+current_state.chr 0 0 0 
+current_state.vrs 0 1 1 
+current_state.pcr 1 0 1 
+
+State Machine - |note_sender|next_state
+Name next_state.pcr next_state.vrs next_state.chr 
+next_state.chr 0 0 0 
+next_state.vrs 0 1 1 
+next_state.pcr 1 0 1 
