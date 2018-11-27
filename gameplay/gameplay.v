@@ -4,13 +4,13 @@ module gameplay(
 					 input stop,
 					 input [4:0]buttons,
 					 input strum,
+					 input notes_to_play,
 					 
 					 output [4:0]LEDR,
 					 output reg note_hit,
 					 output reg note_miss
 					 );
 	
-	wire [4:0] exp_notes;
 	reg [4:0] key_in;
 	
 	//FSM for loading in buttons with immediate clear
@@ -63,12 +63,6 @@ module gameplay(
 		current_state <= next_state;
 	end
 	//---------------------------------------------------|
-	
-	//Note Sender to run through our list of expected notes
-	note_sender note_sender(.clk(clk),
-									.pause(pause),
-									.stop(stop),
-									.exp_notes(exp_notes));
 							 
 	//FSM tester to see if the user hits a note
 	//---------------------------------------------------|
@@ -84,17 +78,17 @@ module gameplay(
 	begin
 		case(current_state2)
 		NO_NOTES:
-			if (exp_notes != 5'd0) next_state2 <= NOTES_IN;
+			if (notes_to_play != 5'd0) next_state2 <= NOTES_IN;
 			
 		NOTES_IN:
 			if (key_in != 5'd0) next_state2 <= READ;
-			else if (exp_notes == 5'd0) next_state2 <= READ;
+			else if (notes_to_play == 5'd0) next_state2 <= READ;
 		
 		READ:
 			next_state2 <= CHECK;
 			
 		CHECK:
-			if (exp_notes == 5'd0) next_state2 <= NO_NOTES;
+			if (notes_to_play == 5'd0) next_state2 <= NO_NOTES;
 			
 		default: next_state2 <= NO_NOTES;
 		
@@ -106,10 +100,10 @@ module gameplay(
 		case(current_state2)
 		READ:
 		begin
-			if (exp_notes != 5'd0)
+			if (notes_to_play != 5'd0)
 				begin
 				
-				if (key_in == exp_notes)
+				if (key_in == notes_to_play)
 				
 				begin
 					note_hit <= 1'b1;
@@ -125,7 +119,7 @@ module gameplay(
 				
 			end
 			
-			else if (exp_notes == 5'd0)
+			else if (notes_to_play == 5'd0)
 			
 			begin
 					note_miss <= 1'b1;
@@ -147,6 +141,6 @@ module gameplay(
 	end
 	//---------------------------------------------------|
 	
-	assign LEDR = exp_notes;
+	assign LEDR = notes_to_play;
 	
 endmodule
