@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at DE1_SoC_Audio_Example.v(81): always construct contains both blocking and non-blocking assignments File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/audio_output/DE1_SoC_Audio_Example.v Line: 81

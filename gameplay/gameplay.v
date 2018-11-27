@@ -1,49 +1,62 @@
 module gameplay(
-					 input CLOCK_50,
-					 input [9:0] SW,
-					 input [35:0] GPIO_0,
-					 input strummer,
+					 input clk,
+					 input pause,
+					 input stop,
+					 input [4:0]buttons,
+					 input strum,
 					 
-					 output reg note_hit
+					 output [4:0]LEDR,
+					 output reg note_hit,
+					 output reg note_miss
 					 );
 	
 	wire [4:0] exp_notes;
-	wire [4:0] buttons;
 	reg [4:0] key_in;
 	
 	//FSM for loading in buttons with immediate clear
 	//---------------------------------------------------|
-	parameter WAIT_FOR_STRUM = 3'b001;
-	parameter LOAD = 3'b010;
-	parameter CLEAR = 3'b100;
+	localparam WAIT_FOR_STRUM = 3'd0;
+	localparam LOAD = 3'd1;
+	localparam CLEAR = 3'd2;
 	
 	reg [2:0] current_state;
 	reg [2:0] next_state;
+	reg [8:0] count_cycles;
 	
-	always @(posedge CLOCK_50)
+	always @(posedge clk)
 	begin
 		case(current_state)
 		WAIT_FOR_STRUM:
-			if (strummer) next_state <= LOAD;
+			if (strum) next_state <= LOAD;
 			
 		LOAD:
-			next_state <= CLEAR;
+			if (count_cycles == 9'd500) next_state <= CLEAR;
 		
 		CLEAR:
-			if (~strummer) next_state <= WAIT_FOR_STRUM;
+			if (~strum) next_state <= WAIT_FOR_STRUM;
 			
 		default: next_state <= CLEAR;
 		endcase
 	end
 	
-	always @(posedge CLOCK_50)
+	always @(posedge clk)
 	begin
 		case(current_state)
-		WAIT_FOR_STRUM: key_in <= 5'b00000;
+		WAIT_FOR_STRUM: key_in <= 5'd0;
 			
-		LOAD: key_in <= buttons;
+		LOAD:
+		begin
+			key_in <= buttons;
+			count_cycles <= count_cycles+1;
+		end
 		
-		CLEAR: key_in <= 5'b00000;
+		CLEAR:
+		begin
+			key_in <= 5'd0;
+			count_cycles<=9'd0;
+		end
+		
+		default: key_in <= 5'd0;
 
 		endcase
 		
@@ -52,59 +65,88 @@ module gameplay(
 	//---------------------------------------------------|
 	
 	//Note Sender to run through our list of expected notes
-	note_sender note_sender(.CLOCK_50(CLOCK_50),
-									.pause(SW[0]),
+	note_sender note_sender(.clk(clk),
+									.pause(pause),
+									.stop(stop),
 									.exp_notes(exp_notes));
-	//GPIO input to buttons						
-	GPIO_input buttons_in(.CLOCK_50(CLOCK_50),
-								 .GPIO_0(GPIO_0),
-								 .buttons(buttons));
 							 
 	//FSM tester to see if the user hits a note
 	//---------------------------------------------------|
-	parameter NO_NOTES = 3'b001;
-	parameter NOTES_IN = 3'b010;
-	parameter CHECK = 3'b100;
+	localparam NO_NOTES = 3'd0;
+	localparam NOTES_IN = 3'd1;
+	localparam READ = 3'd2;
+	localparam CHECK = 3'd3;
 	
 	reg [2:0] current_state2;
 	reg [2:0] next_state2;
 	
-	reg note_hit_hold = 1'b0;
-	
-	always @(posedge CLOCK_50)
+	always @(posedge clk)
 	begin
 		case(current_state2)
 		NO_NOTES:
-			if (exp_notes != 5'b00000) next_state2 <= NOTES_IN;
+			if (exp_notes != 5'd0) next_state2 <= NOTES_IN;
 			
 		NOTES_IN:
-			if (exp_notes == 5'b00000) next_state2 <= CHECK;
+			if (key_in != 5'd0) next_state2 <= READ;
+			else if (exp_notes == 5'd0) next_state2 <= READ;
 		
-		CHECK:
-			next_state2 <= NO_NOTES;
+		READ:
+			next_state2 <= CHECK;
 			
-		default: next_state2 <= NOTES_IN;
+		CHECK:
+			if (exp_notes == 5'd0) next_state2 <= NO_NOTES;
+			
+		default: next_state2 <= NO_NOTES;
+		
 		endcase
 	end
 	
-	always @(posedge CLOCK_50)
+	always @(posedge clk)
 	begin
 		case(current_state2)
-		NOTES_IN:
-			if (key_in != 5'b00000)
-				if (key_in == exp_notes) note_hit_hold <= 1'b1;
-				else note_hit_hold <= 1'b0;
-			
-		CHECK:
+		READ:
 		begin
-			note_hit <= note_hit_hold;
-			note_hit_hold <= 1'b0;
+			if (exp_notes != 5'd0)
+				begin
+				
+				if (key_in == exp_notes)
+				
+				begin
+					note_hit <= 1'b1;
+					note_miss <= 1'b0;
+				end
+				
+				else if (key_in != exp_notes)
+				
+				begin
+					note_miss <= 1'b1;
+					note_hit <= 1'b0;
+				end
+				
+			end
+			
+			else if (exp_notes == 5'd0)
+			
+			begin
+					note_miss <= 1'b1;
+					note_hit <= 1'b0;
+			end
+			
 		end
 		
+		CHECK:
+		begin
+			note_miss <= 1'b0;
+			note_hit <= 1'b0;
+		end
+		
+		default: note_hit <= 1'b0;
 		endcase
 		
 		current_state2 <= next_state2;
 	end
 	//---------------------------------------------------|
+	
+	assign LEDR = exp_notes;
 	
 endmodule

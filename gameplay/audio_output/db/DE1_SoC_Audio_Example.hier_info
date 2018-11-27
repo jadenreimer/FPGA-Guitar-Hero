@@ -1,18 +1,21 @@
 |DE1_SoC_Audio_Example
-CLOCK_50 => CLOCK_50.IN2
-KEY[0] => _.IN1
-KEY[0] => _.IN1
+CLOCK_50 => CLOCK_8.CLK
+CLOCK_50 => count2[0].CLK
+CLOCK_50 => count2[1].CLK
+CLOCK_50 => count2[2].CLK
+KEY[0] => Audio_Controller:Audio_Controller.reset
+KEY[0] => avconf:avc.reset
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
 KEY[3] => ~NO_FANOUT~
-AUD_ADCDAT => AUD_ADCDAT.IN1
+AUD_ADCDAT => Audio_Controller:Audio_Controller.AUD_ADCDAT
 AUD_BCLK <> Audio_Controller:Audio_Controller.AUD_BCLK
 AUD_ADCLRCK <> Audio_Controller:Audio_Controller.AUD_ADCLRCK
 AUD_DACLRCK <> Audio_Controller:Audio_Controller.AUD_DACLRCK
 FPGA_I2C_SDAT <> avconf:avc.FPGA_I2C_SDAT
-AUD_XCK << Audio_Controller:Audio_Controller.AUD_XCK
-AUD_DACDAT << Audio_Controller:Audio_Controller.AUD_DACDAT
-FPGA_I2C_SCLK << avconf:avc.FPGA_I2C_SCLK
+AUD_XCK <= Audio_Controller:Audio_Controller.AUD_XCK
+AUD_DACDAT <= Audio_Controller:Audio_Controller.AUD_DACDAT
+FPGA_I2C_SCLK <= avconf:avc.FPGA_I2C_SCLK
 
 
 |DE1_SoC_Audio_Example|audio_in:get_sample

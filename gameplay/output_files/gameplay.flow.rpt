@@ -1,5 +1,5 @@
 Flow report for gameplay
-Wed Nov 21 02:48:59 2018
+Wed Nov 21 11:32:24 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Nov 21 02:48:30 2018       ;
+; Flow Status                     ; Successful - Wed Nov 21 11:31:53 2018       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; gameplay                                    ;
 ; Top-level Entity Name           ; gameplay                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 60 / 32,070 ( < 1 % )                       ;
-; Total registers                 ; 66                                          ;
-; Total pins                      ; 49 / 457 ( 11 % )                           ;
+; Logic utilization (in ALMs)     ; 67 / 32,070 ( < 1 % )                       ;
+; Total registers                 ; 70                                          ;
+; Total pins                      ; 58 / 457 ( 13 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/21/2018 02:44:46 ;
+; Start date & time ; 11/21/2018 11:28:18 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; gameplay            ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 93328252356774.154278628513584         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 93328252356774.154281769611992         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -93,11 +93,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:33     ; 1.0                     ; 4837 MB             ; 00:00:56                           ;
-; Fitter               ; 00:02:29     ; 1.0                     ; 6277 MB             ; 00:03:00                           ;
-; Assembler            ; 00:00:38     ; 1.0                     ; 4861 MB             ; 00:00:34                           ;
-; Timing Analyzer      ; 00:00:26     ; 1.0                     ; 5133 MB             ; 00:00:23                           ;
-; Total                ; 00:04:06     ; --                      ; --                  ; 00:04:53                           ;
+; Analysis & Synthesis ; 00:00:34     ; 1.0                     ; 4832 MB             ; 00:00:57                           ;
+; Fitter               ; 00:02:24     ; 1.0                     ; 6273 MB             ; 00:02:49                           ;
+; Assembler            ; 00:00:31     ; 1.0                     ; 4859 MB             ; 00:00:30                           ;
+; Timing Analyzer      ; 00:00:27     ; 1.0                     ; 5145 MB             ; 00:00:25                           ;
+; Total                ; 00:03:56     ; --                      ; --                  ; 00:04:41                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

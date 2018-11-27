@@ -1,5 +1,5 @@
 Analysis & Synthesis report for gameplay
-Wed Nov 21 02:45:16 2018
+Wed Nov 21 11:28:49 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -17,10 +17,10 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   9. State Machine - |gameplay|next_state2
  10. State Machine - |gameplay|current_state
  11. State Machine - |gameplay|next_state
- 12. General Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: Top-level Entity: |gameplay
- 15. Parameter Settings for User Entity Instance: note_sender:note_sender
+ 12. Registers Removed During Synthesis
+ 13. Removed Registers Triggering Further Register Optimizations
+ 14. General Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
  16. Post-Synthesis Netlist Statistics for Top Partition
  17. Elapsed Time Per Partition
  18. Analysis & Synthesis Messages
@@ -49,14 +49,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Nov 21 02:45:15 2018       ;
+; Analysis & Synthesis Status     ; Successful - Wed Nov 21 11:28:49 2018       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; gameplay                                    ;
 ; Top-level Entity Name           ; gameplay                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 64                                          ;
-; Total pins                      ; 49                                          ;
+; Total registers                 ; 68                                          ;
+; Total pins                      ; 58                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -189,25 +189,25 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 60             ;
+; Estimate of Logic utilization (ALMs needed) ; 67             ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 94             ;
+; Combinational ALUT usage for logic          ; 106            ;
 ;     -- 7 input functions                    ; 1              ;
-;     -- 6 input functions                    ; 23             ;
-;     -- 5 input functions                    ; 9              ;
-;     -- 4 input functions                    ; 19             ;
-;     -- <=3 input functions                  ; 42             ;
+;     -- 6 input functions                    ; 25             ;
+;     -- 5 input functions                    ; 8              ;
+;     -- 4 input functions                    ; 23             ;
+;     -- <=3 input functions                  ; 49             ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 64             ;
+; Dedicated logic registers                   ; 68             ;
 ;                                             ;                ;
-; I/O pins                                    ; 49             ;
+; I/O pins                                    ; 58             ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 64             ;
-; Total fan-out                               ; 598            ;
-; Average fan-out                             ; 2.34           ;
+; Maximum fan-out                             ; 68             ;
+; Total fan-out                               ; 656            ;
+; Average fan-out                             ; 2.26           ;
 +---------------------------------------------+----------------+
 
 
@@ -216,7 +216,7 @@ refer to the applicable agreement for further details.
 +------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Entity Name ; Library Name ;
 +------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+-------------+--------------+
-; |gameplay                    ; 94 (18)             ; 64 (19)                   ; 0                 ; 0          ; 49   ; 0            ; |gameplay                         ; gameplay    ; work         ;
+; |gameplay                    ; 106 (30)            ; 68 (23)                   ; 0                 ; 0          ; 58   ; 0            ; |gameplay                         ; gameplay    ; work         ;
 ;    |GPIO_input:buttons_in|   ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |gameplay|GPIO_input:buttons_in   ; GPIO_input  ; work         ;
 ;    |note_sender:note_sender| ; 76 (76)             ; 40 (40)                   ; 0                 ; 0          ; 0    ; 0            ; |gameplay|note_sender:note_sender ; note_sender ; work         ;
 +------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+-------------+--------------+
@@ -226,49 +226,73 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Encoding Type:  One-Hot
 +----------------------------------------------------------------------------------------------------+
 ; State Machine - |gameplay|current_state2                                                           ;
-+-------------------------+----------------------+-------------------------+-------------------------+
-; Name                    ; current_state2.CHECK ; current_state2.NOTES_IN ; current_state2.NO_NOTES ;
-+-------------------------+----------------------+-------------------------+-------------------------+
-; current_state2.NO_NOTES ; 0                    ; 0                       ; 0                       ;
-; current_state2.NOTES_IN ; 0                    ; 1                       ; 1                       ;
-; current_state2.CHECK    ; 1                    ; 0                       ; 1                       ;
-+-------------------------+----------------------+-------------------------+-------------------------+
++-------------------------+-------------------------+----------------------+-------------------------+
+; Name                    ; current_state2.NO_NOTES ; current_state2.CHECK ; current_state2.NOTES_IN ;
++-------------------------+-------------------------+----------------------+-------------------------+
+; current_state2.NO_NOTES ; 0                       ; 0                    ; 0                       ;
+; current_state2.NOTES_IN ; 1                       ; 0                    ; 1                       ;
+; current_state2.CHECK    ; 1                       ; 1                    ; 0                       ;
++-------------------------+-------------------------+----------------------+-------------------------+
 
 
 Encoding Type:  One-Hot
 +----------------------------------------------------------------------------------------+
 ; State Machine - |gameplay|next_state2                                                  ;
-+----------------------+-------------------+----------------------+----------------------+
-; Name                 ; next_state2.CHECK ; next_state2.NOTES_IN ; next_state2.NO_NOTES ;
-+----------------------+-------------------+----------------------+----------------------+
-; next_state2.NO_NOTES ; 0                 ; 0                    ; 0                    ;
-; next_state2.NOTES_IN ; 0                 ; 1                    ; 1                    ;
-; next_state2.CHECK    ; 1                 ; 0                    ; 1                    ;
-+----------------------+-------------------+----------------------+----------------------+
++----------------------+----------------------+-------------------+----------------------+
+; Name                 ; next_state2.NO_NOTES ; next_state2.CHECK ; next_state2.NOTES_IN ;
++----------------------+----------------------+-------------------+----------------------+
+; next_state2.NO_NOTES ; 0                    ; 0                 ; 0                    ;
+; next_state2.NOTES_IN ; 1                    ; 0                 ; 1                    ;
+; next_state2.CHECK    ; 1                    ; 1                 ; 0                    ;
++----------------------+----------------------+-------------------+----------------------+
 
 
 Encoding Type:  One-Hot
 +--------------------------------------------------------------------------------------------------------+
 ; State Machine - |gameplay|current_state                                                                ;
-+------------------------------+---------------------+--------------------+------------------------------+
-; Name                         ; current_state.CLEAR ; current_state.LOAD ; current_state.WAIT_FOR_STRUM ;
-+------------------------------+---------------------+--------------------+------------------------------+
-; current_state.WAIT_FOR_STRUM ; 0                   ; 0                  ; 0                            ;
-; current_state.LOAD           ; 0                   ; 1                  ; 1                            ;
-; current_state.CLEAR          ; 1                   ; 0                  ; 1                            ;
-+------------------------------+---------------------+--------------------+------------------------------+
++------------------------------+------------------------------+---------------------+--------------------+
+; Name                         ; current_state.WAIT_FOR_STRUM ; current_state.CLEAR ; current_state.LOAD ;
++------------------------------+------------------------------+---------------------+--------------------+
+; current_state.WAIT_FOR_STRUM ; 0                            ; 0                   ; 0                  ;
+; current_state.LOAD           ; 1                            ; 0                   ; 1                  ;
+; current_state.CLEAR          ; 1                            ; 1                   ; 0                  ;
++------------------------------+------------------------------+---------------------+--------------------+
 
 
 Encoding Type:  One-Hot
 +--------------------------------------------------------------------------------------------+
 ; State Machine - |gameplay|next_state                                                       ;
-+---------------------------+------------------+-----------------+---------------------------+
-; Name                      ; next_state.CLEAR ; next_state.LOAD ; next_state.WAIT_FOR_STRUM ;
-+---------------------------+------------------+-----------------+---------------------------+
-; next_state.WAIT_FOR_STRUM ; 0                ; 0               ; 0                         ;
-; next_state.LOAD           ; 0                ; 1               ; 1                         ;
-; next_state.CLEAR          ; 1                ; 0               ; 1                         ;
-+---------------------------+------------------+-----------------+---------------------------+
++---------------------------+---------------------------+------------------+-----------------+
+; Name                      ; next_state.WAIT_FOR_STRUM ; next_state.CLEAR ; next_state.LOAD ;
++---------------------------+---------------------------+------------------+-----------------+
+; next_state.WAIT_FOR_STRUM ; 0                         ; 0                ; 0               ;
+; next_state.LOAD           ; 1                         ; 0                ; 1               ;
+; next_state.CLEAR          ; 1                         ; 1                ; 0               ;
++---------------------------+---------------------------+------------------+-----------------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; current_state2~4                      ; Lost fanout        ;
+; next_state2~7                         ; Lost fanout        ;
+; current_state~4                       ; Lost fanout        ;
+; next_state~7                          ; Lost fanout        ;
+; current_state2.CHECK                  ; Lost fanout        ;
+; next_state2.CHECK                     ; Lost fanout        ;
+; Total Number of Removed Registers = 6 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                        ;
++----------------------+--------------------+----------------------------------------+
+; Register name        ; Reason for Removal ; Registers Removed due to This Register ;
++----------------------+--------------------+----------------------------------------+
+; current_state2.CHECK ; Lost Fanouts       ; next_state2.CHECK                      ;
++----------------------+--------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -276,7 +300,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 64    ;
+; Total registers                              ; 68    ;
 ; Number of registers using Synchronous Clear  ; 34    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -291,33 +315,9 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
-; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |gameplay|note_sender:note_sender|t[1] ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |gameplay|note_sender:note_sender|t[0] ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |gameplay|Selector0                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
-
-
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |gameplay ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; WAIT_FOR_STRUM ; 001   ; Unsigned Binary                                 ;
-; LOAD           ; 010   ; Unsigned Binary                                 ;
-; CLEAR          ; 100   ; Unsigned Binary                                 ;
-; NO_NOTES       ; 001   ; Unsigned Binary                                 ;
-; NOTES_IN       ; 010   ; Unsigned Binary                                 ;
-; CHECK          ; 100   ; Unsigned Binary                                 ;
-+----------------+-------+-------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: note_sender:note_sender ;
-+----------------+---------------------------+-------------------------+
-; Parameter Name ; Value                     ; Type                    ;
-+----------------+---------------------------+-------------------------+
-; EIGHTH_NOTE    ; 0110010001100011000000111 ; Unsigned Binary         ;
-+----------------+---------------------------+-------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -325,25 +325,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 64                          ;
+; arriav_ff             ; 68                          ;
 ;     ENA               ; 1                           ;
 ;     ENA SCLR          ; 34                          ;
-;     plain             ; 29                          ;
-; arriav_lcell_comb     ; 94                          ;
-;     arith             ; 34                          ;
-;         1 data inputs ; 34                          ;
+;     plain             ; 33                          ;
+; arriav_lcell_comb     ; 107                         ;
+;     arith             ; 41                          ;
+;         1 data inputs ; 41                          ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 59                          ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 19                          ;
-;         5 data inputs ; 9                           ;
-;         6 data inputs ; 23                          ;
-; boundary_port         ; 49                          ;
+;     normal            ; 65                          ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 23                          ;
+;         5 data inputs ; 8                           ;
+;         6 data inputs ; 25                          ;
+; boundary_port         ; 58                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.40                        ;
-; Average LUT depth     ; 2.20                        ;
+; Average LUT depth     ; 2.24                        ;
 +-----------------------+-----------------------------+
 
 
@@ -362,7 +363,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Wed Nov 21 02:44:42 2018
+    Info: Processing started: Wed Nov 21 11:28:14 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off gameplay -c gameplay
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -373,15 +374,23 @@ Info (12021): Found 1 design units, including 1 entities, in source file gpio_in
 Info (12021): Found 1 design units, including 1 entities, in source file note_sender/note_sender.v
     Info (12023): Found entity 1: note_sender File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/note_sender/note_sender.v Line: 1
 Info (12127): Elaborating entity "gameplay" for the top level hierarchy
-Info (10264): Verilog HDL Case Statement information at gameplay.v(92): all case item expressions in this case statement are onehot File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/gameplay.v Line: 92
-Info (12128): Elaborating entity "note_sender" for hierarchy "note_sender:note_sender" File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/gameplay.v Line: 57
+Warning (10230): Verilog HDL assignment warning at gameplay.v(48): truncated value with size 32 to match size of target (7) File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/gameplay.v Line: 48
+Info (10264): Verilog HDL Case Statement information at gameplay.v(102): all case item expressions in this case statement are onehot File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/gameplay.v Line: 102
+Warning (10034): Output port "LEDR[8..5]" at gameplay.v(8) has no driver File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/gameplay.v Line: 8
+Info (12128): Elaborating entity "note_sender" for hierarchy "note_sender:note_sender" File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/gameplay.v Line: 68
 Warning (10230): Verilog HDL assignment warning at note_sender.v(24): truncated value with size 32 to match size of target (25) File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/note_sender/note_sender.v Line: 24
 Warning (10230): Verilog HDL assignment warning at note_sender.v(37): truncated value with size 32 to match size of target (9) File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/note_sender/note_sender.v Line: 37
-Info (12128): Elaborating entity "GPIO_input" for hierarchy "GPIO_input:buttons_in" File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/gameplay.v Line: 61
+Info (12128): Elaborating entity "GPIO_input" for hierarchy "GPIO_input:buttons_in" File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/gameplay.v Line: 72
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/gameplay.v Line: 8
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/gameplay.v Line: 8
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/gameplay.v Line: 8
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/gameplay.v Line: 8
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 40 input pin(s) that do not drive logic
+Warning (21074): Design contains 39 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/gameplay.v Line: 3
     Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/gameplay.v Line: 3
     Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/gameplay.v Line: 3
@@ -391,7 +400,6 @@ Warning (21074): Design contains 40 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/gameplay.v Line: 3
     Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/gameplay.v Line: 3
     Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/gameplay.v Line: 3
-    Warning (15610): No output dependent on input pin "GPIO_0[5]" File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/gameplay.v Line: 4
     Warning (15610): No output dependent on input pin "GPIO_0[6]" File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/gameplay.v Line: 4
     Warning (15610): No output dependent on input pin "GPIO_0[7]" File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/gameplay.v Line: 4
     Warning (15610): No output dependent on input pin "GPIO_0[8]" File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/gameplay.v Line: 4
@@ -422,14 +430,14 @@ Warning (21074): Design contains 40 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "GPIO_0[33]" File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/gameplay.v Line: 4
     Warning (15610): No output dependent on input pin "GPIO_0[34]" File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/gameplay.v Line: 4
     Warning (15610): No output dependent on input pin "GPIO_0[35]" File: C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/gameplay/gameplay.v Line: 4
-Info (21057): Implemented 155 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 48 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 106 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 44 warnings
-    Info: Peak virtual memory: 4847 megabytes
-    Info: Processing ended: Wed Nov 21 02:45:16 2018
-    Info: Elapsed time: 00:00:34
-    Info: Total CPU time (on all processors): 00:00:57
+Info (21057): Implemented 175 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 47 input pins
+    Info (21059): Implemented 11 output pins
+    Info (21061): Implemented 117 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 50 warnings
+    Info: Peak virtual memory: 4841 megabytes
+    Info: Processing ended: Wed Nov 21 11:28:49 2018
+    Info: Elapsed time: 00:00:35
+    Info: Total CPU time (on all processors): 00:00:58
 
 

@@ -46,13 +46,17 @@ GPIO_0[32] => GPIO_0[32].IN1
 GPIO_0[33] => GPIO_0[33].IN1
 GPIO_0[34] => GPIO_0[34].IN1
 GPIO_0[35] => GPIO_0[35].IN1
-strummer => next_state.OUTPUTSELECT
-strummer => next_state.OUTPUTSELECT
-strummer => next_state.OUTPUTSELECT
-strummer => next_state.OUTPUTSELECT
-strummer => next_state.OUTPUTSELECT
-strummer => next_state.OUTPUTSELECT
-note_hit << note_hit~reg0.DB_MAX_OUTPUT_PORT_TYPE
+note_hit <= note_hit~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[0] <= note_sender:note_sender.exp_notes
+LEDR[1] <= note_sender:note_sender.exp_notes
+LEDR[2] <= note_sender:note_sender.exp_notes
+LEDR[3] <= note_sender:note_sender.exp_notes
+LEDR[4] <= note_sender:note_sender.exp_notes
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= note_hit~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |gameplay|note_sender:note_sender
@@ -144,12 +148,12 @@ CLOCK_50 => buttons[1]~reg0.CLK
 CLOCK_50 => buttons[2]~reg0.CLK
 CLOCK_50 => buttons[3]~reg0.CLK
 CLOCK_50 => buttons[4]~reg0.CLK
-GPIO_0[0] => buttons[0]~reg0.DATAIN
-GPIO_0[1] => buttons[1]~reg0.DATAIN
-GPIO_0[2] => buttons[2]~reg0.DATAIN
-GPIO_0[3] => buttons[3]~reg0.DATAIN
-GPIO_0[4] => buttons[4]~reg0.DATAIN
-GPIO_0[5] => ~NO_FANOUT~
+GPIO_0[0] => ~NO_FANOUT~
+GPIO_0[1] => buttons[0]~reg0.DATAIN
+GPIO_0[2] => buttons[1]~reg0.DATAIN
+GPIO_0[3] => buttons[2]~reg0.DATAIN
+GPIO_0[4] => buttons[3]~reg0.DATAIN
+GPIO_0[5] => buttons[4]~reg0.DATAIN
 GPIO_0[6] => ~NO_FANOUT~
 GPIO_0[7] => ~NO_FANOUT~
 GPIO_0[8] => ~NO_FANOUT~

@@ -1,0 +1,32 @@
+
+State Machine - |super_guitar_boy|gameplay:play_game|current_state2
+Name current_state2.CHECK current_state2.READ current_state2.NOTES_IN current_state2.NO_NOTES 
+current_state2.NO_NOTES 0 0 0 0 
+current_state2.NOTES_IN 0 0 1 1 
+current_state2.READ 0 1 0 1 
+current_state2.CHECK 1 0 0 1 
+
+State Machine - |super_guitar_boy|gameplay:play_game|next_state2
+Name next_state2.CHECK next_state2.READ next_state2.NOTES_IN next_state2.NO_NOTES 
+next_state2.NO_NOTES 0 0 0 0 
+next_state2.NOTES_IN 0 0 1 1 
+next_state2.READ 0 1 0 1 
+next_state2.CHECK 1 0 0 1 
+
+State Machine - |super_guitar_boy|gameplay:play_game|current_state
+Name current_state.WAIT_FOR_STRUM current_state.CLEAR current_state.LOAD 
+current_state.WAIT_FOR_STRUM 0 0 0 
+current_state.LOAD 1 0 1 
+current_state.CLEAR 1 1 0 
+
+State Machine - |super_guitar_boy|gameplay:play_game|next_state
+Name next_state.WAIT_FOR_STRUM next_state.CLEAR next_state.LOAD 
+next_state.WAIT_FOR_STRUM 0 0 0 
+next_state.LOAD 1 0 1 
+next_state.CLEAR 1 1 0 
+
+State Machine - |super_guitar_boy|play_song:smoke_on_the_water|avconf:avc|mSetup_ST
+Name mSetup_ST.0000 mSetup_ST.0010 mSetup_ST.0001 
+mSetup_ST.0000 0 0 0 
+mSetup_ST.0001 1 0 1 
+mSetup_ST.0010 1 1 0 
