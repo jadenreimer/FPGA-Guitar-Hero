@@ -21,12 +21,13 @@
 `timescale 1ns / 1ns 
 
  module drop_notes (
-	CLOCK_50,							//On Board 50 MHz
-	SW,								// On Board Switches for debugging
-	KEY,								// On Board Keys
-	
-	song_notes,						// Notes from chorus
-	correct_notes,
+	clk,								//On Board 50 MHz
+	reset,
+	switches,								// On Board Switches for debugging
+
+//	correct_notes,
+	pause,
+	stop,
 	
 	notes_to_play,					// Notes to comparator
 	
@@ -41,11 +42,13 @@
 	VGA_B	   						//	VGA Blue[9:0]
 );
 	
-	input	CLOCK_50;				//	50 MHz
-	input	[3:0]	KEY;
-	input	[9:0]	SW;
-	input [4:0] song_notes;			// Input from chorus for what to play
-	input [4:0] correct_notes;		// Input from comparator about what notes were correctly hit
+	input	clk;				//	50 MHz
+	input reset;
+	input	[4:0]	switches;
+
+//	input [4:0] correct_notes;		// Input from comparator about what notes were correctly hit
+	input pause;
+	input stop;
 
 	output [4:0] notes_to_play;	// not going to touch this for now; game logic
 	
@@ -58,10 +61,6 @@
 	output	[7:0]	VGA_R;   				//	VGA Red[7:0] Changed from 10 to 8-bit DAC
 	output	[7:0]	VGA_G;	 				//	VGA Green[7:0]
 	output	[7:0]	VGA_B;   				//	VGA Blue[7:0]
-		
-	wire reset;
-	assign reset = ~KEY[0]; // Inverting the input here means we can consider the reset as we think intuitively: resets when pressed
-	
 	
 /*
  * -------------------------------------------------------------------------------------------------------------------------------
@@ -82,6 +81,7 @@
 	
 	// Wires for game logic
 	wire [4:0] note_to_play;
+	wire [4:0] chorus_notes; // Send correct notes to register
 
 	// Wires for the plotter and x/y calculator
 	wire enablePlotter;
@@ -136,12 +136,19 @@
 		else colour_out_real = 9'b000000000; // black
 	end
 
+	note_sender(
+		.clk(CLOCK_50),
+		.pause(pause),
+		.stop(stop),
+		.exp_notes(chorus_notes) // 5 bits
+		);
+	
 	// FSM:
 	control myControl (
 		.reset(reset),
 		.clk (CLOCK_50),
 		.beat(beat),
-		.start(~KEY[3]),
+		.start(~pause), // If pause is low, start the game
 		.printed_register(printed_register), // Read through the register; make sure this is the correct signal
 		.check_for_background(colour_to_VGA),
 		.plot_done(plotterDone),
@@ -185,7 +192,7 @@
 		
 		.shiftEnable(FSM_shift), // Controls if the FSM is telling it to drop down
 		.y_level(current_y),
-		.FSM_notes(SW[4:0]/*song_notes*/), // Input for the notes being loaded from the chorus, or switches for debugging
+		.FSM_notes(switches[4:0]/*chorus_notes*/), // Input for the notes being loaded from the chorus, or switches for debugging
 		
 		.note_to_play(notes_to_play), // Loose end right now, disconnected
 		.register_notes_out(register_data) // The value of the data being read (I expect this needs to be a reg but I'm not certain)
@@ -548,6 +555,7 @@ endmodule
  * Rate driver: driven high every "beat"
  * -------------------------------------------------------------------------------------------------------------------------------
  */
+ 
 module rate_driver (
 
     input clk,
@@ -555,13 +563,13 @@ module rate_driver (
     output reg beat
 );
 	
-//	localparam EIGHTH_NOTE = 25'd16315790;
+	localparam EIGHTH_NOTE = 25'd13157895;
 	
 	reg [24:0] t = 25'd0;
 	
 	always@(posedge clk)
 	begin
-		if (t == 25'd15000000)
+		if (t == EIGHTH_NOTE)
 		begin
 			t <= 25'd0;
 			beat <= 1'b1;

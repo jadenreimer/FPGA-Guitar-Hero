@@ -4,7 +4,7 @@ module gameplay(
 					 input stop,
 					 input [4:0]buttons,
 					 input strum,
-					 input notes_to_play,
+					 input [4:0] notes_to_play,
 					 
 					 output [4:0]LEDR,
 					 output reg note_hit,
@@ -110,7 +110,7 @@ module gameplay(
 					note_miss <= 1'b0;
 				end
 				
-				else if (key_in != exp_notes)
+				else if (key_in != notes_to_play)
 				
 				begin
 					note_miss <= 1'b1;
