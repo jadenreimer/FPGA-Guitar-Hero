@@ -1,0 +1,42 @@
+# set the working dir, where all compiled verilog goes
+vlib work
+vlog datapath.v
+#vlog vga_adapter.v
+vsim -L altera_mf_ver datapath -t ns
+
+#log all signals
+log {/*}
+# add all waves
+add wave {/*}
+
+force {clk}		0 0ns, 1 {5ns} -r 10ns
+force {reset} 		1 0ns, 0 10ns
+	
+force {i_notes} 	10101 0ns
+	
+force {i_xctrl_sel}	0 0ns, 1 90ns
+force {i_yctrl_sel}	0 0ns, 1 180ns
+force {i_xctrl_en}	1 0ns, 0 130ns
+force {i_yctrl_en}	1 0ns
+
+force {i_x_sel} 	0 0ns, 1 40ns, 0 70ns, 1 80ns
+force {i_y_sel}		0 0ns, 1 70ns, 0 80ns
+force {i_x_en}		0 0ns, 1 30ns
+force {i_y_en}		0 0ns, 1 30ns, 0 40ns, 1 70ns, 0 80ns
+
+force {i_colour}	1 0ns
+force {i_colour_en}	1 0ns
+
+#force {i_notes_en}	1 0ns
+force {i_reg_en}	1 0ns, 0 20ns
+
+force {i_xeq_en}	1 0ns
+force {i_yeq_en}	1 0ns
+run 710 ns
+
+
+# Stock formats
+#force {}  ns, 1 {20ns}
+#force {}  ns,  ns
+#force {}  ns
+#run nscd ../..

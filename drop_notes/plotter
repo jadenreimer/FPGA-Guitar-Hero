@@ -1,0 +1,36 @@
+# set the working dir, where all compiled verilog goes
+vlib work
+vlog drop_keys.v
+vlog vga_adapter.v
+vsim -L altera_mf_ver plotter -t ns
+
+#log all signals
+log {/*}
+# add all waves
+add wave {/*}
+
+
+force {clk} 		0 0ns, 1 {5ns} -r 10ns
+force {reset} 		1 0ns, 0 10ns
+force {plot_note} 	1 0ns, 0 320ns
+force {clear_note} 	0 0ns, 1 320ns
+force {enablePlotter} 	0 0ns, 1 10ns, 0 200ns
+force {x_in} 		000111000 0ns, 011000000 700ns
+force {y_in} 		00110000 0ns, 00000001 700ns
+run 710 ns
+
+
+force {clk} 		0 0ns, 1 {5ns} -r 10ns
+force {reset} 		1 0ns, 0 10ns
+force {plot_note} 	1 0ns, 0 320ns
+force {clear_note} 	0 0ns, 1 320ns
+force {enablePlotter} 	0 0ns, 1 10ns
+force {x_in} 		011000000 0ns
+force {y_in} 		00000001 0ns
+run 710 ns
+
+# Stock formats
+#force {}  ns, 1 {20ns}
+#force {}  ns,  ns
+#force {}  ns
+#run nscd ../..
