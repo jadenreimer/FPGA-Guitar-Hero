@@ -41,7 +41,7 @@ module control (
 		
 			MAIN: next_state = start ? DEC_REG : MAIN;
 
-			DEC_REG: next_state =  DRAW;//DRAW;
+			DEC_REG: next_state =  DRAW;
 			DRAW: next_state = printed_register ? WAIT : DRAW; // Counted column is if there is a change in the column counter
 
 			WAIT: next_state = beat ? ERASE : WAIT;

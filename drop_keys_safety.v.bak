@@ -229,7 +229,7 @@
 	vga_adapter VGA(
 			.resetn(~reset),
 			.clock(clk),
-			.colour(colour_to_VGA),
+			.colour(colour_out_real),
 			.x(x_to_VGA),
 			.y(y_to_VGA),
 			.plot(1),

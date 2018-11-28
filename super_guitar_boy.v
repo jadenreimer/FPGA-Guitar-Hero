@@ -40,8 +40,6 @@ module super_guitar_boy(
 	wire reset;
 	assign reset = ~KEY[0];
 	
-	
-	
 	//internal wires
 	
 	wire note_hit;
@@ -84,7 +82,7 @@ module super_guitar_boy(
 	
 	drop_notes display(
 							.clk(CLOCK_50),							//On Board 50 MHz
-							.reset(reset),							// On Board Keys
+							.reset(0),							// On Board Keys
 							.switches(SW[9:5]),
 							
 							.pause(pause),

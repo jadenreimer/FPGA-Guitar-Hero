@@ -130,8 +130,6 @@ module plotter (
 		end // reset if
 		
 		
-		
-		
 		// Colour select
 		if(colour_calc != 9'b000000000)
 		begin
