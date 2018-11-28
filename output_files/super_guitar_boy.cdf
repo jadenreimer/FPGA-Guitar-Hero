@@ -1,4 +1,4 @@
-/* Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition */
+/* Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition */
 JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("C:/Users/Joseph/Documents/2nd_Year/ECE241/FinalProject/GitHub/241-project/output_files/") File("super_guitar_boy.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/output_files/") File("drop_keys.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

@@ -1,3 +1,4 @@
+// Integrated version
 /*
  * -------------------------------------------------------------------------------------------------------------------------------
  * DROP KEYS MODULE
@@ -136,19 +137,19 @@
 		else colour_out_real = 9'b000000000; // black
 	end
 
-	note_sender(
-		.clk(CLOCK_50),
-		.pause(pause),
-		.stop(stop),
-		.exp_notes(chorus_notes) // 5 bits
-		);
+//	note_sender(
+//		.clk(CLOCK_50),
+//		.pause(pause),
+//		.stop(stop),
+//		.exp_notes(chorus_notes) // 5 bits
+//		);
 	
 	// FSM:
 	control myControl (
 		.reset(reset),
 		.clk (CLOCK_50),
 		.beat(beat),
-		.start(~pause), // If pause is low, start the game
+		.start(~stop), // If pause is low, start the game
 		.printed_register(printed_register), // Read through the register; make sure this is the correct signal
 		.check_for_background(colour_to_VGA),
 		.plot_done(plotterDone),
@@ -256,7 +257,7 @@
 	// image file (.MIF) for the controller.
 	vga_adapter VGA(
 			.resetn(~reset),
-			.clock(CLOCK_50),
+			.clock(clk),
 			.colour(colour_out_real),
 			.x(x_to_VGA),
 			.y(y_to_VGA),

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for super_guitar_boy
-Tue Nov 27 15:46:25 2018
+Tue Nov 27 17:22:40 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,62 +10,66 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. State Machine - |super_guitar_boy|drop_notes:display|control:myControl|current_state
-  6. State Machine - |super_guitar_boy|gameplay:play_game|current_state2
-  7. State Machine - |super_guitar_boy|gameplay:play_game|next_state2
-  8. State Machine - |super_guitar_boy|gameplay:play_game|current_state
-  9. State Machine - |super_guitar_boy|gameplay:play_game|next_state
- 10. State Machine - |super_guitar_boy|play_song:smoke_on_the_water|avconf:avc|mSetup_ST
- 11. Registers Removed During Synthesis
- 12. Removed Registers Triggering Further Register Optimizations
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for play_song:smoke_on_the_water|audio_in:get_sample|altsyncram:altsyncram_component|altsyncram_tip1:auto_generated
- 15. Source assignments for play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram
- 16. Source assignments for play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram
- 17. Source assignments for play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram
- 18. Source assignments for play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram
- 19. Source assignments for drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated
- 20. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|audio_in:get_sample|altsyncram:altsyncram_component
- 21. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer
- 22. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter
- 23. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO
- 24. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO
- 25. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO
- 26. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO
- 27. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer
- 28. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO
- 29. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO
- 30. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO
- 31. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO
- 32. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock|altpll:altpll_component
- 33. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|avconf:avc
- 34. Parameter Settings for User Entity Instance: drop_notes:display|vga_adapter:VGA
- 35. Parameter Settings for User Entity Instance: drop_notes:display|vga_adapter:VGA|vga_address_translator:user_input_translator
- 36. Parameter Settings for User Entity Instance: drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory
- 37. Parameter Settings for User Entity Instance: drop_notes:display|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
- 38. Parameter Settings for User Entity Instance: drop_notes:display|vga_adapter:VGA|vga_controller:controller
- 39. Parameter Settings for User Entity Instance: drop_notes:display|vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
- 40. altsyncram Parameter Settings by Entity Instance
- 41. scfifo Parameter Settings by Entity Instance
- 42. altpll Parameter Settings by Entity Instance
- 43. Port Connectivity Checks: "bcd_converter:bcd_score"
- 44. Port Connectivity Checks: "scoring:player_score"
- 45. Port Connectivity Checks: "drop_notes:display|vga_adapter:VGA|vga_controller:controller"
- 46. Port Connectivity Checks: "drop_notes:display|vga_adapter:VGA"
- 47. Port Connectivity Checks: "drop_notes:display|x_counter:rows"
- 48. Port Connectivity Checks: "drop_notes:display|control:myControl"
- 49. Port Connectivity Checks: "drop_notes:display|note_sender:comb_51"
- 50. Port Connectivity Checks: "play_song:smoke_on_the_water|avconf:avc|I2C_Controller:u0"
- 51. Port Connectivity Checks: "play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock"
- 52. Port Connectivity Checks: "play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer"
- 53. Port Connectivity Checks: "play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer"
- 54. Port Connectivity Checks: "play_song:smoke_on_the_water|Audio_Controller:Audio_Controller"
- 55. Port Connectivity Checks: "play_song:smoke_on_the_water|audio_in:get_sample"
- 56. Port Connectivity Checks: "play_song:smoke_on_the_water"
- 57. Post-Synthesis Netlist Statistics for Top Partition
- 58. Elapsed Time Per Partition
- 59. Analysis & Synthesis Messages
- 60. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. State Machine - |super_guitar_boy|drop_notes:display|control:myControl|current_state
+ 10. State Machine - |super_guitar_boy|gameplay:play_game|current_state2
+ 11. State Machine - |super_guitar_boy|gameplay:play_game|next_state2
+ 12. State Machine - |super_guitar_boy|gameplay:play_game|current_state
+ 13. State Machine - |super_guitar_boy|gameplay:play_game|next_state
+ 14. State Machine - |super_guitar_boy|play_song:smoke_on_the_water|avconf:avc|mSetup_ST
+ 15. Registers Removed During Synthesis
+ 16. Removed Registers Triggering Further Register Optimizations
+ 17. General Register Statistics
+ 18. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 19. Source assignments for play_song:smoke_on_the_water|audio_in:get_sample|altsyncram:altsyncram_component|altsyncram_tip1:auto_generated
+ 20. Source assignments for play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram
+ 21. Source assignments for play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram
+ 22. Source assignments for play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram
+ 23. Source assignments for play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram
+ 24. Source assignments for drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated
+ 25. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|audio_in:get_sample|altsyncram:altsyncram_component
+ 26. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer
+ 27. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter
+ 28. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO
+ 29. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO
+ 30. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO
+ 31. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO
+ 32. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer
+ 33. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO
+ 34. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO
+ 35. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO
+ 36. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO
+ 37. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock|altpll:altpll_component
+ 38. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|avconf:avc
+ 39. Parameter Settings for User Entity Instance: drop_notes:display|vga_adapter:VGA
+ 40. Parameter Settings for User Entity Instance: drop_notes:display|vga_adapter:VGA|vga_address_translator:user_input_translator
+ 41. Parameter Settings for User Entity Instance: drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory
+ 42. Parameter Settings for User Entity Instance: drop_notes:display|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
+ 43. Parameter Settings for User Entity Instance: drop_notes:display|vga_adapter:VGA|vga_controller:controller
+ 44. Parameter Settings for User Entity Instance: drop_notes:display|vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
+ 45. altsyncram Parameter Settings by Entity Instance
+ 46. scfifo Parameter Settings by Entity Instance
+ 47. altpll Parameter Settings by Entity Instance
+ 48. Port Connectivity Checks: "bcd_converter:bcd_score"
+ 49. Port Connectivity Checks: "scoring:player_score"
+ 50. Port Connectivity Checks: "drop_notes:display|vga_adapter:VGA|vga_controller:controller"
+ 51. Port Connectivity Checks: "drop_notes:display|vga_adapter:VGA"
+ 52. Port Connectivity Checks: "drop_notes:display|x_counter:rows"
+ 53. Port Connectivity Checks: "drop_notes:display|control:myControl"
+ 54. Port Connectivity Checks: "play_song:smoke_on_the_water|avconf:avc|I2C_Controller:u0"
+ 55. Port Connectivity Checks: "play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock"
+ 56. Port Connectivity Checks: "play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer"
+ 57. Port Connectivity Checks: "play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer"
+ 58. Port Connectivity Checks: "play_song:smoke_on_the_water|Audio_Controller:Audio_Controller"
+ 59. Port Connectivity Checks: "play_song:smoke_on_the_water|audio_in:get_sample"
+ 60. Port Connectivity Checks: "play_song:smoke_on_the_water"
+ 61. Post-Synthesis Netlist Statistics for Top Partition
+ 62. Elapsed Time Per Partition
+ 63. Analysis & Synthesis Messages
+ 64. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -91,23 +95,23 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Nov 27 15:46:24 2018       ;
+; Analysis & Synthesis Status     ; Successful - Tue Nov 27 17:22:40 2018       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; super_guitar_boy                            ;
 ; Top-level Entity Name           ; super_guitar_boy                            ;
 ; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A until Partition Merge                   ;
-; Total registers                 ; N/A until Partition Merge                   ;
-; Total pins                      ; N/A until Partition Merge                   ;
-; Total virtual pins              ; N/A until Partition Merge                   ;
-; Total block memory bits         ; N/A until Partition Merge                   ;
-; Total DSP Blocks                ; N/A until Partition Merge                   ;
-; Total HSSI RX PCSs              ; N/A until Partition Merge                   ;
-; Total HSSI PMA RX Deserializers ; N/A until Partition Merge                   ;
-; Total HSSI TX PCSs              ; N/A until Partition Merge                   ;
-; Total HSSI PMA TX Serializers   ; N/A until Partition Merge                   ;
-; Total PLLs                      ; N/A until Partition Merge                   ;
-; Total DLLs                      ; N/A until Partition Merge                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 34                                          ;
+; Total pins                      ; 132                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 691,200                                     ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 1                                           ;
+; Total DLLs                      ; 0                                           ;
 +---------------------------------+---------------------------------------------+
 
 
@@ -207,11 +211,139 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                            ;
++--------------------------------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                         ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                ; Library ;
++--------------------------------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------+---------+
+; drop_notes/vga_pll.v                                                     ; yes             ; User Wizard-Generated File   ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/vga_pll.v                                                     ;         ;
+; drop_notes/vga_controller.v                                              ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/vga_controller.v                                              ;         ;
+; drop_notes/vga_address_translator.v                                      ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/vga_address_translator.v                                      ;         ;
+; drop_notes/vga_adapter.v                                                 ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/vga_adapter.v                                                 ;         ;
+; drop_notes/drop_keys_safety.v                                            ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v                                            ;         ;
+; gameplay/audio_output/avconf/I2C_Controller.v                            ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/audio_output/avconf/I2C_Controller.v                            ;         ;
+; gameplay/audio_output/avconf/avconf.v                                    ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/audio_output/avconf/avconf.v                                    ;         ;
+; gameplay/audio_output/Audio_Controller/Audio_Controller.v                ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/audio_output/Audio_Controller/Audio_Controller.v                ;         ;
+; gameplay/audio_output/Audio_Controller/Audio_Clock.v                     ; yes             ; User Wizard-Generated File   ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/audio_output/Audio_Controller/Audio_Clock.v                     ;         ;
+; gameplay/audio_output/Audio_Controller/Altera_UP_SYNC_FIFO.v             ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/audio_output/Audio_Controller/Altera_UP_SYNC_FIFO.v             ;         ;
+; gameplay/audio_output/Audio_Controller/Altera_UP_Clock_Edge.v            ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/audio_output/Audio_Controller/Altera_UP_Clock_Edge.v            ;         ;
+; gameplay/audio_output/Audio_Controller/Altera_UP_Audio_Out_Serializer.v  ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/audio_output/Audio_Controller/Altera_UP_Audio_Out_Serializer.v  ;         ;
+; gameplay/audio_output/Audio_Controller/Altera_UP_Audio_In_Deserializer.v ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/audio_output/Audio_Controller/Altera_UP_Audio_In_Deserializer.v ;         ;
+; gameplay/audio_output/Audio_Controller/Altera_UP_Audio_Bit_Counter.v     ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/audio_output/Audio_Controller/Altera_UP_Audio_Bit_Counter.v     ;         ;
+; gameplay/audio_output/audio_in.v                                         ; yes             ; User Wizard-Generated File   ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/audio_output/audio_in.v                                         ;         ;
+; gameplay/gameplay.v                                                      ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/gameplay.v                                                      ;         ;
+; gameplay/bcd_converter.v                                                 ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/bcd_converter.v                                                 ;         ;
+; gameplay/HEX_Display.v                                                   ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/HEX_Display.v                                                   ;         ;
+; gameplay/scoring.v                                                       ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/scoring.v                                                       ;         ;
+; gameplay/audio_output/play_song.v                                        ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/audio_output/play_song.v                                        ;         ;
+; super_guitar_boy.v                                                       ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v                                                       ;         ;
+; altsyncram.tdf                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                                       ;         ;
+; stratix_ram_block.inc                                                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                ;         ;
+; lpm_mux.inc                                                              ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                                          ;         ;
+; lpm_decode.inc                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                                       ;         ;
+; aglobal181.inc                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                       ;         ;
+; a_rdenreg.inc                                                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                        ;         ;
+; altrom.inc                                                               ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                                                           ;         ;
+; altram.inc                                                               ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                                           ;         ;
+; altdpram.inc                                                             ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                                         ;         ;
+; db/altsyncram_tip1.tdf                                                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_tip1.tdf                                                   ;         ;
+; db/decode_dla.tdf                                                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/decode_dla.tdf                                                        ;         ;
+; db/decode_61a.tdf                                                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/decode_61a.tdf                                                        ;         ;
+; db/mux_ahb.tdf                                                           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/mux_ahb.tdf                                                           ;         ;
+; scfifo.tdf                                                               ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/scfifo.tdf                                                           ;         ;
+; a_regfifo.inc                                                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_regfifo.inc                                                        ;         ;
+; a_dpfifo.inc                                                             ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_dpfifo.inc                                                         ;         ;
+; a_i2fifo.inc                                                             ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_i2fifo.inc                                                         ;         ;
+; a_fffifo.inc                                                             ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_fffifo.inc                                                         ;         ;
+; a_f2fifo.inc                                                             ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_f2fifo.inc                                                         ;         ;
+; db/scfifo_7ba1.tdf                                                       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/scfifo_7ba1.tdf                                                       ;         ;
+; db/a_dpfifo_q2a1.tdf                                                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/a_dpfifo_q2a1.tdf                                                     ;         ;
+; db/altsyncram_n3i1.tdf                                                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_n3i1.tdf                                                   ;         ;
+; db/cmpr_6l8.tdf                                                          ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/cmpr_6l8.tdf                                                          ;         ;
+; db/cntr_h2b.tdf                                                          ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/cntr_h2b.tdf                                                          ;         ;
+; db/cntr_u27.tdf                                                          ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/cntr_u27.tdf                                                          ;         ;
+; db/cntr_i2b.tdf                                                          ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/cntr_i2b.tdf                                                          ;         ;
+; altpll.tdf                                                               ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf                                                           ;         ;
+; stratix_pll.inc                                                          ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_pll.inc                                                      ;         ;
+; stratixii_pll.inc                                                        ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratixii_pll.inc                                                    ;         ;
+; cycloneii_pll.inc                                                        ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/cycloneii_pll.inc                                                    ;         ;
+; db/audio_clock_altpll.v                                                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/audio_clock_altpll.v                                                  ;         ;
+; db/altsyncram_j0o1.tdf                                                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf                                                   ;         ;
+; db/decode_nma.tdf                                                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/decode_nma.tdf                                                        ;         ;
+; db/decode_g2a.tdf                                                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/decode_g2a.tdf                                                        ;         ;
+; db/mux_8hb.tdf                                                           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/mux_8hb.tdf                                                           ;         ;
+; db/altpll_80u.tdf                                                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altpll_80u.tdf                                                        ;         ;
++--------------------------------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                                             ;
++---------------------------------------------+-----------------------------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                                     ;
++---------------------------------------------+-----------------------------------------------------------------------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 60                                                                                                        ;
+;                                             ;                                                                                                           ;
+; Combinational ALUT usage for logic          ; 90                                                                                                        ;
+;     -- 7 input functions                    ; 0                                                                                                         ;
+;     -- 6 input functions                    ; 28                                                                                                        ;
+;     -- 5 input functions                    ; 7                                                                                                         ;
+;     -- 4 input functions                    ; 12                                                                                                        ;
+;     -- <=3 input functions                  ; 43                                                                                                        ;
+;                                             ;                                                                                                           ;
+; Dedicated logic registers                   ; 34                                                                                                        ;
+;                                             ;                                                                                                           ;
+; I/O pins                                    ; 132                                                                                                       ;
+; Total MLAB memory bits                      ; 0                                                                                                         ;
+; Total block memory bits                     ; 691200                                                                                                    ;
+;                                             ;                                                                                                           ;
+; Total DSP Blocks                            ; 0                                                                                                         ;
+;                                             ;                                                                                                           ;
+; Total PLLs                                  ; 1                                                                                                         ;
+;     -- PLLs                                 ; 1                                                                                                         ;
+;                                             ;                                                                                                           ;
+; Maximum fan-out node                        ; drop_notes:display|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|clk[0] ;
+; Maximum fan-out                             ; 126                                                                                                       ;
+; Total fan-out                               ; 2152                                                                                                      ;
+; Average fan-out                             ; 4.49                                                                                                      ;
++---------------------------------------------+-----------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                               ;
++------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
+; Compilation Hierarchy Node                                 ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                 ; Entity Name            ; Library Name ;
++------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
+; |super_guitar_boy                                          ; 90 (1)              ; 34 (0)                    ; 691200            ; 0          ; 132  ; 0            ; |super_guitar_boy                                                                                                                   ; super_guitar_boy       ; work         ;
+;    |drop_notes:display|                                    ; 89 (0)              ; 34 (0)                    ; 691200            ; 0          ; 0    ; 0            ; |super_guitar_boy|drop_notes:display                                                                                                ; drop_notes             ; work         ;
+;       |vga_adapter:VGA|                                    ; 89 (0)              ; 34 (0)                    ; 691200            ; 0          ; 0    ; 0            ; |super_guitar_boy|drop_notes:display|vga_adapter:VGA                                                                                ; vga_adapter            ; work         ;
+;          |altsyncram:VideoMemory|                          ; 46 (0)              ; 8 (0)                     ; 691200            ; 0          ; 0    ; 0            ; |super_guitar_boy|drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory                                                         ; altsyncram             ; work         ;
+;             |altsyncram_j0o1:auto_generated|               ; 46 (0)              ; 8 (8)                     ; 691200            ; 0          ; 0    ; 0            ; |super_guitar_boy|drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated                          ; altsyncram_j0o1        ; work         ;
+;                |decode_g2a:rden_decode_b|                  ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |super_guitar_boy|drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|decode_g2a:rden_decode_b ; decode_g2a             ; work         ;
+;                |mux_8hb:mux3|                              ; 36 (36)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |super_guitar_boy|drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|mux_8hb:mux3             ; mux_8hb                ; work         ;
+;          |vga_controller:controller|                       ; 43 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |super_guitar_boy|drop_notes:display|vga_adapter:VGA|vga_controller:controller                                                      ; vga_controller         ; work         ;
+;             |vga_address_translator:controller_translator| ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |super_guitar_boy|drop_notes:display|vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator         ; vga_address_translator ; work         ;
+;          |vga_pll:mypll|                                   ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |super_guitar_boy|drop_notes:display|vga_adapter:VGA|vga_pll:mypll                                                                  ; vga_pll                ; work         ;
+;             |altpll:altpll_component|                      ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |super_guitar_boy|drop_notes:display|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component                                          ; altpll                 ; work         ;
+;                |altpll_80u:auto_generated|                 ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |super_guitar_boy|drop_notes:display|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated                ; altpll_80u             ; work         ;
++------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                ;
++-----------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+----------------------------+
+; Name                                                                                                ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF                        ;
++-----------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+----------------------------+
+; drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 76800        ; 9            ; 76800        ; 9            ; 691200 ; guitar_hero_background.mif ;
++-----------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+----------------------------+
 
 
 Encoding Type:  One-Hot
@@ -568,6 +700,21 @@ Encoding Type:  One-Hot
 ; gameplay:play_game|next_state2~7                                                                                                                                                                                                               ; Lost Fanouts              ; gameplay:play_game|current_state2.NOTES_IN                                                                                                                                                                                                                                       ;
 ; gameplay:play_game|current_state.CLEAR                                                                                                                                                                                                         ; Lost Fanouts              ; gameplay:play_game|next_state.CLEAR                                                                                                                                                                                                                                              ;
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 34    ;
+; Number of registers using Synchronous Clear  ; 20    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 20    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 10    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1937,15 +2084,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "drop_notes:display|note_sender:comb_51"                                                  ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; exp_notes ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "play_song:smoke_on_the_water|avconf:avc|I2C_Controller:u0"                                                                                         ;
 +------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2054,7 +2192,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 90                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.95                        ;
+; Average LUT depth     ; 1.94                        ;
 +-----------------------+-----------------------------+
 
 
@@ -2073,7 +2211,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Nov 27 15:45:59 2018
+    Info: Processing started: Tue Nov 27 17:22:13 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off super_guitar_boy -c super_guitar_boy
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -2086,15 +2224,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file drop_no
 Info (12021): Found 1 design units, including 1 entities, in source file drop_notes/vga_adapter.v
     Info (12023): Found entity 1: vga_adapter File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/vga_adapter.v Line: 78
 Info (12021): Found 9 design units, including 9 entities, in source file drop_notes/drop_keys_safety.v
-    Info (12023): Found entity 1: drop_notes File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 23
-    Info (12023): Found entity 2: notes_register File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 295
-    Info (12023): Found entity 3: find_x_and_y File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 338
-    Info (12023): Found entity 4: plotter File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 390
-    Info (12023): Found entity 5: y_counter File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 472
-    Info (12023): Found entity 6: x_counter File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 516
-    Info (12023): Found entity 7: rate_driver File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 559
-    Info (12023): Found entity 8: control File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 594
-    Info (12023): Found entity 9: shift_register File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 687
+    Info (12023): Found entity 1: drop_notes File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 24
+    Info (12023): Found entity 2: notes_register File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 296
+    Info (12023): Found entity 3: find_x_and_y File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 339
+    Info (12023): Found entity 4: plotter File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 391
+    Info (12023): Found entity 5: y_counter File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 473
+    Info (12023): Found entity 6: x_counter File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 517
+    Info (12023): Found entity 7: rate_driver File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 560
+    Info (12023): Found entity 8: control File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 595
+    Info (12023): Found entity 9: shift_register File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 688
 Info (12021): Found 1 design units, including 1 entities, in source file gameplay/audio_output/avconf/i2c_controller.v
     Info (12023): Found entity 1: I2C_Controller File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/audio_output/avconf/I2C_Controller.v Line: 43
 Info (12021): Found 1 design units, including 1 entities, in source file gameplay/audio_output/avconf/avconf.v
@@ -2131,7 +2269,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file gamepla
     Info (12023): Found entity 1: play_song File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/audio_output/play_song.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file super_guitar_boy.v
     Info (12023): Found entity 1: super_guitar_boy File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at drop_keys_safety.v(140): created implicit net for "CLOCK_50" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 140
+Warning (10236): Verilog HDL Implicit Net warning at drop_keys_safety.v(150): created implicit net for "CLOCK_50" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 150
 Warning (10236): Verilog HDL Implicit Net warning at super_guitar_boy.v(60): created implicit net for "AUD_ADCDAT" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 60
 Warning (10236): Verilog HDL Implicit Net warning at super_guitar_boy.v(62): created implicit net for "AUD_BCLK" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 62
 Warning (10236): Verilog HDL Implicit Net warning at super_guitar_boy.v(63): created implicit net for "AUD_ADCLRCK" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 63
@@ -2140,7 +2278,6 @@ Warning (10236): Verilog HDL Implicit Net warning at super_guitar_boy.v(66): cre
 Warning (10236): Verilog HDL Implicit Net warning at super_guitar_boy.v(68): created implicit net for "AUD_XCK" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 68
 Warning (10236): Verilog HDL Implicit Net warning at super_guitar_boy.v(69): created implicit net for "AUD_DACDAT" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 69
 Warning (10236): Verilog HDL Implicit Net warning at super_guitar_boy.v(71): created implicit net for "FPGA_I2C_SCLK" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 71
-Critical Warning (10846): Verilog HDL Instantiation warning at drop_keys_safety.v(144): instance has no name File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 144
 Info (12127): Elaborating entity "super_guitar_boy" for the top level hierarchy
 Warning (10034): Output port "LEDR[5]" at super_guitar_boy.v(14) has no driver File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 14
 Info (12128): Elaborating entity "play_song" for hierarchy "play_song:smoke_on_the_water" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 72
@@ -2294,44 +2431,40 @@ Info (12128): Elaborating entity "gameplay" for hierarchy "gameplay:play_game" F
 Warning (10230): Verilog HDL assignment warning at gameplay.v(50): truncated value with size 32 to match size of target (9) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/gameplay.v Line: 50
 Info (10264): Verilog HDL Case Statement information at gameplay.v(100): all case item expressions in this case statement are onehot File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/gameplay.v Line: 100
 Info (12128): Elaborating entity "drop_notes" for hierarchy "drop_notes:display" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 106
-Info (12128): Elaborating entity "note_sender" for hierarchy "drop_notes:display|note_sender:comb_51" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 144
-Warning (10230): Verilog HDL assignment warning at note_sender.v(24): truncated value with size 32 to match size of target (25) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/note_sender/note_sender.v Line: 24
-Warning (10230): Verilog HDL assignment warning at note_sender.v(39): truncated value with size 32 to match size of target (5) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/note_sender/note_sender.v Line: 39
-Warning (10230): Verilog HDL assignment warning at note_sender.v(46): truncated value with size 9 to match size of target (5) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/note_sender/note_sender.v Line: 46
-Info (12128): Elaborating entity "control" for hierarchy "drop_notes:display|control:myControl" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 169
-Warning (10270): Verilog HDL Case Statement warning at drop_keys_safety.v(649): incomplete case statement has no default case item File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 649
-Info (10264): Verilog HDL Case Statement information at drop_keys_safety.v(649): all case item expressions in this case statement are onehot File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 649
-Warning (10034): Output port "FSM_pause" at drop_keys_safety.v(613) has no driver File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 613
-Info (12128): Elaborating entity "find_x_and_y" for hierarchy "drop_notes:display|find_x_and_y:calculator" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 185
-Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(372): truncated value with size 32 to match size of target (9) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 372
+Info (12128): Elaborating entity "control" for hierarchy "drop_notes:display|control:myControl" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 170
+Warning (10270): Verilog HDL Case Statement warning at drop_keys_safety.v(650): incomplete case statement has no default case item File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 650
+Info (10264): Verilog HDL Case Statement information at drop_keys_safety.v(650): all case item expressions in this case statement are onehot File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 650
+Warning (10034): Output port "FSM_pause" at drop_keys_safety.v(614) has no driver File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 614
+Info (12128): Elaborating entity "find_x_and_y" for hierarchy "drop_notes:display|find_x_and_y:calculator" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 186
 Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(373): truncated value with size 32 to match size of target (9) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 373
-Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(375): truncated value with size 32 to match size of target (9) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 375
+Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(374): truncated value with size 32 to match size of target (9) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 374
 Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(376): truncated value with size 32 to match size of target (9) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 376
-Warning (10270): Verilog HDL Case Statement warning at drop_keys_safety.v(371): incomplete case statement has no default case item File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 371
-Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(379): truncated value with size 32 to match size of target (8) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 379
-Warning (10240): Verilog HDL Always Construct warning at drop_keys_safety.v(371): inferring latch(es) for variable "x_to_plotter", which holds its previous value in one or more paths through the always construct File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 371
-Warning (10034): Output port "done_x_and_y" at drop_keys_safety.v(352) has no driver File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 352
-Info (10041): Inferred latch for "x_to_plotter[0]" at drop_keys_safety.v(371) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 371
-Info (10041): Inferred latch for "x_to_plotter[1]" at drop_keys_safety.v(371) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 371
-Info (10041): Inferred latch for "x_to_plotter[2]" at drop_keys_safety.v(371) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 371
-Info (10041): Inferred latch for "x_to_plotter[3]" at drop_keys_safety.v(371) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 371
-Info (10041): Inferred latch for "x_to_plotter[4]" at drop_keys_safety.v(371) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 371
-Info (10041): Inferred latch for "x_to_plotter[5]" at drop_keys_safety.v(371) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 371
-Info (10041): Inferred latch for "x_to_plotter[6]" at drop_keys_safety.v(371) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 371
-Info (10041): Inferred latch for "x_to_plotter[7]" at drop_keys_safety.v(371) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 371
-Info (10041): Inferred latch for "x_to_plotter[8]" at drop_keys_safety.v(371) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 371
-Info (12128): Elaborating entity "notes_register" for hierarchy "drop_notes:display|notes_register:notes" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 199
-Info (12128): Elaborating entity "shift_register" for hierarchy "drop_notes:display|notes_register:notes|shift_register:green1" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 313
-Info (12128): Elaborating entity "x_counter" for hierarchy "drop_notes:display|x_counter:rows" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 213
-Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(544): truncated value with size 32 to match size of target (3) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 544
-Info (12128): Elaborating entity "y_counter" for hierarchy "drop_notes:display|y_counter:big_count" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 225
-Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(491): truncated value with size 32 to match size of target (3) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 491
-Info (12128): Elaborating entity "rate_driver" for hierarchy "drop_notes:display|rate_driver:eighth_note" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 233
-Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(580): truncated value with size 32 to match size of target (25) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 580
-Info (12128): Elaborating entity "plotter" for hierarchy "drop_notes:display|plotter:myPlotter" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 250
-Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(415): truncated value with size 32 to match size of target (4) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 415
-Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(432): truncated value with size 32 to match size of target (4) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 432
-Info (12128): Elaborating entity "vga_adapter" for hierarchy "drop_notes:display|vga_adapter:VGA" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 272
+Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(377): truncated value with size 32 to match size of target (9) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 377
+Warning (10270): Verilog HDL Case Statement warning at drop_keys_safety.v(372): incomplete case statement has no default case item File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 372
+Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(380): truncated value with size 32 to match size of target (8) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 380
+Warning (10240): Verilog HDL Always Construct warning at drop_keys_safety.v(372): inferring latch(es) for variable "x_to_plotter", which holds its previous value in one or more paths through the always construct File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 372
+Warning (10034): Output port "done_x_and_y" at drop_keys_safety.v(353) has no driver File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 353
+Info (10041): Inferred latch for "x_to_plotter[0]" at drop_keys_safety.v(372) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 372
+Info (10041): Inferred latch for "x_to_plotter[1]" at drop_keys_safety.v(372) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 372
+Info (10041): Inferred latch for "x_to_plotter[2]" at drop_keys_safety.v(372) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 372
+Info (10041): Inferred latch for "x_to_plotter[3]" at drop_keys_safety.v(372) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 372
+Info (10041): Inferred latch for "x_to_plotter[4]" at drop_keys_safety.v(372) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 372
+Info (10041): Inferred latch for "x_to_plotter[5]" at drop_keys_safety.v(372) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 372
+Info (10041): Inferred latch for "x_to_plotter[6]" at drop_keys_safety.v(372) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 372
+Info (10041): Inferred latch for "x_to_plotter[7]" at drop_keys_safety.v(372) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 372
+Info (10041): Inferred latch for "x_to_plotter[8]" at drop_keys_safety.v(372) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 372
+Info (12128): Elaborating entity "notes_register" for hierarchy "drop_notes:display|notes_register:notes" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 200
+Info (12128): Elaborating entity "shift_register" for hierarchy "drop_notes:display|notes_register:notes|shift_register:green1" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 314
+Info (12128): Elaborating entity "x_counter" for hierarchy "drop_notes:display|x_counter:rows" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 214
+Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(545): truncated value with size 32 to match size of target (3) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 545
+Info (12128): Elaborating entity "y_counter" for hierarchy "drop_notes:display|y_counter:big_count" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 226
+Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(492): truncated value with size 32 to match size of target (3) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 492
+Info (12128): Elaborating entity "rate_driver" for hierarchy "drop_notes:display|rate_driver:eighth_note" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 234
+Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(581): truncated value with size 32 to match size of target (25) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 581
+Info (12128): Elaborating entity "plotter" for hierarchy "drop_notes:display|plotter:myPlotter" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 251
+Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(416): truncated value with size 32 to match size of target (4) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 416
+Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(433): truncated value with size 32 to match size of target (4) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 433
+Info (12128): Elaborating entity "vga_adapter" for hierarchy "drop_notes:display|vga_adapter:VGA" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 273
 Info (12128): Elaborating entity "vga_address_translator" for hierarchy "drop_notes:display|vga_adapter:VGA|vga_address_translator:user_input_translator" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/vga_adapter.v Line: 192
 Info (12128): Elaborating entity "altsyncram" for hierarchy "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/vga_adapter.v Line: 213
 Info (12130): Elaborated megafunction instantiation "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/vga_adapter.v Line: 213
@@ -2433,7 +2566,7 @@ Info (12128): Elaborating entity "HEX_Display" for hierarchy "HEX_Display:hex0" 
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "score[20]" is missing source, defaulting to GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 50
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "drop_notes:display|CLOCK_50" is missing source, defaulting to GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 140
+    Warning (12110): Net "drop_notes:display|CLOCK_50" is missing source, defaulting to GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 150
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "score[20]" is missing source, defaulting to GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 50
 Warning (12011): Net is missing source, defaulting to GND
@@ -2912,110 +3045,70 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 359 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/Jaden Reimer/Documents/GitHub/241-project/output_files/super_guitar_boy.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Error: REFCLK port on the PLL is not properly connected on instance drop_notes:display|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|generic_pll1.  The reference clock port on the PLL should always be connected.  If there is no reference clock, the PLL will not function correctly. File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altpll_80u.tdf Line: 33
-    Info: Must be connected
+    Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance drop_notes:display|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altpll_80u.tdf Line: 33
     Info: Must be connected
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a7" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 295
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a16" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 610
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a25" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 925
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a34" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1240
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a43" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1555
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a52" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1870
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a61" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2185
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a70" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2500
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a88" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 3130
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a79" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2815
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a8" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 330
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a17" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 645
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a26" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 960
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a35" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1275
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a44" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1590
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a53" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1905
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a62" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2220
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a71" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2535
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a89" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 3165
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a80" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2850
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a6" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 260
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a15" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 575
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a24" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 890
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a33" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1205
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a42" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1520
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a51" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1835
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a60" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2150
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a69" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2465
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a87" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 3095
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a78" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2780
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a4" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 190
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a13" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 505
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a22" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 820
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a31" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1135
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a40" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1450
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a49" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1765
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a58" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2080
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a67" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2395
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a85" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 3025
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a76" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2710
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a5" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 225
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a14" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 540
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a23" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 855
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a32" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1170
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a41" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1485
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a50" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1800
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a59" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2115
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a68" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2430
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a86" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 3060
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a77" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2745
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a3" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 155
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a12" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 470
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a21" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 785
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a30" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1100
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a39" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1415
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a48" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1730
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a57" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2045
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a66" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2360
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a84" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2990
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a75" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2675
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a1" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 85
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a10" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 400
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a19" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 715
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a28" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1030
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a37" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1345
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a46" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1660
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a55" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1975
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a64" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2290
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a82" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2920
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a73" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2605
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a2" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 120
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a11" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 435
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a20" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 750
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a29" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1065
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a38" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1380
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a47" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1695
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a56" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2010
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a65" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2325
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a83" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2955
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a74" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2640
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a0" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 50
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a9" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 365
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a18" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 680
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a27" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 995
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a36" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1310
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a45" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1625
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a54" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 1940
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a63" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2255
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a81" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2885
-Warning (15400): WYSIWYG primitive "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|ram_block1a72" has a port clk0 that is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altsyncram_j0o1.tdf Line: 2570
-Error: REFCLK port on the PLL is not properly connected on instance drop_notes:display|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|generic_pll1.  The reference clock port on the PLL should always be connected.  If there is no reference clock, the PLL will not function correctly. File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altpll_80u.tdf Line: 33
-    Info: Must be connected
-Warning: RST port on the PLL is not properly connected on instance drop_notes:display|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altpll_80u.tdf Line: 33
-    Info: Must be connected
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 631 warnings
-    Error: Peak virtual memory: 4875 megabytes
-    Error: Processing ended: Tue Nov 27 15:46:25 2018
-    Error: Elapsed time: 00:00:26
-    Error: Total CPU time (on all processors): 00:00:50
+Warning (21074): Design contains 49 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 3
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 3
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 3
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 3
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 3
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 3
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 3
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 3
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 4
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 4
+    Warning (15610): No output dependent on input pin "GPIO_0[1]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[2]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[3]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[4]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[5]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[6]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[7]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[8]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[9]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[10]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[11]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[12]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[13]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[14]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[15]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[16]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[17]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[18]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[19]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[20]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[21]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[22]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[23]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[24]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[25]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[26]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[27]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[28]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[29]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[30]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[31]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[32]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[33]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[34]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "GPIO_0[35]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 4
+    Warning (15610): No output dependent on input pin "GPIO_0[0]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 5
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 3
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 3
+Info (21057): Implemented 324 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 51 input pins
+    Info (21059): Implemented 81 output pins
+    Info (21061): Implemented 101 logic cells
+    Info (21064): Implemented 90 RAM segments
+    Info (21065): Implemented 1 PLLs
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 586 warnings
+    Info: Peak virtual memory: 4884 megabytes
+    Info: Processing ended: Tue Nov 27 17:22:40 2018
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:52
 
 
 +------------------------------------------+

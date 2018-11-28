@@ -90,7 +90,7 @@ module super_guitar_boy(
 							.switches(SW[9:5]),
 							
 							.pause(pause),
-							.stop(stop),
+							.stop(~KEY[3]),
 //							.correct_notes(),					// Input to determine if the row should be blacked out or set to white
 							
 							.notes_to_play(notes_to_play),				// Notes to comparator
