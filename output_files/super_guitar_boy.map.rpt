@@ -1,5 +1,5 @@
 Analysis & Synthesis report for super_guitar_boy
-Tue Nov 27 17:22:40 2018
+Tue Nov 27 22:40:24 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,62 +14,63 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. State Machine - |super_guitar_boy|drop_notes:display|control:myControl|current_state
- 10. State Machine - |super_guitar_boy|gameplay:play_game|current_state2
- 11. State Machine - |super_guitar_boy|gameplay:play_game|next_state2
- 12. State Machine - |super_guitar_boy|gameplay:play_game|current_state
- 13. State Machine - |super_guitar_boy|gameplay:play_game|next_state
- 14. State Machine - |super_guitar_boy|play_song:smoke_on_the_water|avconf:avc|mSetup_ST
- 15. Registers Removed During Synthesis
- 16. Removed Registers Triggering Further Register Optimizations
- 17. General Register Statistics
- 18. Multiplexer Restructuring Statistics (Restructuring Performed)
- 19. Source assignments for play_song:smoke_on_the_water|audio_in:get_sample|altsyncram:altsyncram_component|altsyncram_tip1:auto_generated
- 20. Source assignments for play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram
- 21. Source assignments for play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram
- 22. Source assignments for play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram
- 23. Source assignments for play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram
- 24. Source assignments for drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated
- 25. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|audio_in:get_sample|altsyncram:altsyncram_component
- 26. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer
- 27. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter
- 28. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO
- 29. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO
- 30. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO
- 31. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO
- 32. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer
- 33. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO
- 34. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO
- 35. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO
- 36. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO
- 37. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock|altpll:altpll_component
- 38. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|avconf:avc
- 39. Parameter Settings for User Entity Instance: drop_notes:display|vga_adapter:VGA
- 40. Parameter Settings for User Entity Instance: drop_notes:display|vga_adapter:VGA|vga_address_translator:user_input_translator
- 41. Parameter Settings for User Entity Instance: drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory
- 42. Parameter Settings for User Entity Instance: drop_notes:display|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
- 43. Parameter Settings for User Entity Instance: drop_notes:display|vga_adapter:VGA|vga_controller:controller
- 44. Parameter Settings for User Entity Instance: drop_notes:display|vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
- 45. altsyncram Parameter Settings by Entity Instance
- 46. scfifo Parameter Settings by Entity Instance
- 47. altpll Parameter Settings by Entity Instance
- 48. Port Connectivity Checks: "bcd_converter:bcd_score"
- 49. Port Connectivity Checks: "scoring:player_score"
- 50. Port Connectivity Checks: "drop_notes:display|vga_adapter:VGA|vga_controller:controller"
- 51. Port Connectivity Checks: "drop_notes:display|vga_adapter:VGA"
- 52. Port Connectivity Checks: "drop_notes:display|x_counter:rows"
- 53. Port Connectivity Checks: "drop_notes:display|control:myControl"
- 54. Port Connectivity Checks: "play_song:smoke_on_the_water|avconf:avc|I2C_Controller:u0"
- 55. Port Connectivity Checks: "play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock"
- 56. Port Connectivity Checks: "play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer"
- 57. Port Connectivity Checks: "play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer"
- 58. Port Connectivity Checks: "play_song:smoke_on_the_water|Audio_Controller:Audio_Controller"
- 59. Port Connectivity Checks: "play_song:smoke_on_the_water|audio_in:get_sample"
- 60. Port Connectivity Checks: "play_song:smoke_on_the_water"
- 61. Post-Synthesis Netlist Statistics for Top Partition
- 62. Elapsed Time Per Partition
- 63. Analysis & Synthesis Messages
- 64. Analysis & Synthesis Suppressed Messages
+  9. State Machine - |super_guitar_boy|drop_notes:display|plotter:myPlotter|colour_calc
+ 10. State Machine - |super_guitar_boy|drop_notes:display|control:myControl|current_state
+ 11. State Machine - |super_guitar_boy|gameplay:play_game|current_state2
+ 12. State Machine - |super_guitar_boy|gameplay:play_game|next_state2
+ 13. State Machine - |super_guitar_boy|gameplay:play_game|current_state
+ 14. State Machine - |super_guitar_boy|gameplay:play_game|next_state
+ 15. State Machine - |super_guitar_boy|play_song:smoke_on_the_water|avconf:avc|mSetup_ST
+ 16. Registers Removed During Synthesis
+ 17. Removed Registers Triggering Further Register Optimizations
+ 18. General Register Statistics
+ 19. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 20. Source assignments for play_song:smoke_on_the_water|audio_in:get_sample|altsyncram:altsyncram_component|altsyncram_tip1:auto_generated
+ 21. Source assignments for play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram
+ 22. Source assignments for play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram
+ 23. Source assignments for play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram
+ 24. Source assignments for play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram
+ 25. Source assignments for drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated
+ 26. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|audio_in:get_sample|altsyncram:altsyncram_component
+ 27. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer
+ 28. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter
+ 29. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO
+ 30. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO
+ 31. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO
+ 32. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO
+ 33. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer
+ 34. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO
+ 35. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO
+ 36. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO
+ 37. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO
+ 38. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock|altpll:altpll_component
+ 39. Parameter Settings for User Entity Instance: play_song:smoke_on_the_water|avconf:avc
+ 40. Parameter Settings for User Entity Instance: drop_notes:display|vga_adapter:VGA
+ 41. Parameter Settings for User Entity Instance: drop_notes:display|vga_adapter:VGA|vga_address_translator:user_input_translator
+ 42. Parameter Settings for User Entity Instance: drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory
+ 43. Parameter Settings for User Entity Instance: drop_notes:display|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
+ 44. Parameter Settings for User Entity Instance: drop_notes:display|vga_adapter:VGA|vga_controller:controller
+ 45. Parameter Settings for User Entity Instance: drop_notes:display|vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
+ 46. altsyncram Parameter Settings by Entity Instance
+ 47. scfifo Parameter Settings by Entity Instance
+ 48. altpll Parameter Settings by Entity Instance
+ 49. Port Connectivity Checks: "bcd_converter:bcd_score"
+ 50. Port Connectivity Checks: "scoring:player_score"
+ 51. Port Connectivity Checks: "drop_notes:display|vga_adapter:VGA|vga_controller:controller"
+ 52. Port Connectivity Checks: "drop_notes:display|vga_adapter:VGA"
+ 53. Port Connectivity Checks: "drop_notes:display|x_counter:rows"
+ 54. Port Connectivity Checks: "drop_notes:display|control:myControl"
+ 55. Port Connectivity Checks: "play_song:smoke_on_the_water|avconf:avc|I2C_Controller:u0"
+ 56. Port Connectivity Checks: "play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock"
+ 57. Port Connectivity Checks: "play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer"
+ 58. Port Connectivity Checks: "play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer"
+ 59. Port Connectivity Checks: "play_song:smoke_on_the_water|Audio_Controller:Audio_Controller"
+ 60. Port Connectivity Checks: "play_song:smoke_on_the_water|audio_in:get_sample"
+ 61. Port Connectivity Checks: "play_song:smoke_on_the_water"
+ 62. Post-Synthesis Netlist Statistics for Top Partition
+ 63. Elapsed Time Per Partition
+ 64. Analysis & Synthesis Messages
+ 65. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -95,7 +96,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Nov 27 17:22:40 2018       ;
+; Analysis & Synthesis Status     ; Successful - Tue Nov 27 22:40:24 2018       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; super_guitar_boy                            ;
 ; Top-level Entity Name           ; super_guitar_boy                            ;
@@ -224,11 +225,11 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path                                         ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                ; Library ;
 +--------------------------------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------+---------+
+; drop_keys_safety.v                                                       ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_keys_safety.v                                                       ;         ;
 ; drop_notes/vga_pll.v                                                     ; yes             ; User Wizard-Generated File   ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/vga_pll.v                                                     ;         ;
 ; drop_notes/vga_controller.v                                              ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/vga_controller.v                                              ;         ;
 ; drop_notes/vga_address_translator.v                                      ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/vga_address_translator.v                                      ;         ;
 ; drop_notes/vga_adapter.v                                                 ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/vga_adapter.v                                                 ;         ;
-; drop_notes/drop_keys_safety.v                                            ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v                                            ;         ;
 ; gameplay/audio_output/avconf/I2C_Controller.v                            ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/audio_output/avconf/I2C_Controller.v                            ;         ;
 ; gameplay/audio_output/avconf/avconf.v                                    ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/audio_output/avconf/avconf.v                                    ;         ;
 ; gameplay/audio_output/Audio_Controller/Audio_Controller.v                ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/audio_output/Audio_Controller/Audio_Controller.v                ;         ;
@@ -245,6 +246,9 @@ refer to the applicable agreement for further details.
 ; gameplay/scoring.v                                                       ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/scoring.v                                                       ;         ;
 ; gameplay/audio_output/play_song.v                                        ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/audio_output/play_song.v                                        ;         ;
 ; super_guitar_boy.v                                                       ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v                                                       ;         ;
+; control.v                                                                ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/control.v                                                                ;         ;
+; plotter.v                                                                ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v                                                                ;         ;
+; notes_register.v                                                         ; yes             ; User Verilog HDL File        ; C:/Users/Jaden Reimer/Documents/GitHub/241-project/notes_register.v                                                         ;         ;
 ; altsyncram.tdf                                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                                       ;         ;
 ; stratix_ram_block.inc                                                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                ;         ;
 ; lpm_mux.inc                                                              ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                                          ;         ;
@@ -347,6 +351,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
++------------------------------------------------------------------------------------+
+; State Machine - |super_guitar_boy|drop_notes:display|plotter:myPlotter|colour_calc ;
++-----------------------+------------------------------------------------------------+
+; Name                  ; colour_calc.111111111                                      ;
++-----------------------+------------------------------------------------------------+
+; colour_calc.000000000 ; 0                                                          ;
+; colour_calc.111111111 ; 1                                                          ;
++-----------------------+------------------------------------------------------------+
+
+
+Encoding Type:  One-Hot
 +------------------------------------------------------------------------------------------------------------------------------------+
 ; State Machine - |super_guitar_boy|drop_notes:display|control:myControl|current_state                                               ;
 +-----------------------+---------------------+--------------------+-----------------------+--------------------+--------------------+
@@ -427,25 +442,24 @@ Encoding Type:  One-Hot
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------+
 ; Register name                                                                                                                                                                                                                                                                      ; Reason for Removal                                                           ;
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------+
-; drop_notes:display|plotter:myPlotter|colour_to_VGA[0..8]                                                                                                                                                                                                                           ; Stuck at GND due to stuck port clock                                         ;
 ; drop_notes:display|plotter:myPlotter|counter[0..3]                                                                                                                                                                                                                                 ; Stuck at GND due to stuck port clock                                         ;
 ; drop_notes:display|plotter:myPlotter|y_to_VGA[0..7]                                                                                                                                                                                                                                ; Stuck at GND due to stuck port clock                                         ;
 ; drop_notes:display|plotter:myPlotter|x_to_VGA[0..8]                                                                                                                                                                                                                                ; Stuck at GND due to stuck port clock                                         ;
 ; drop_notes:display|plotter:myPlotter|plotterDone                                                                                                                                                                                                                                   ; Stuck at GND due to stuck port clock                                         ;
-; drop_notes:display|find_x_and_y:calculator|enablePlotter                                                                                                                                                                                                                           ; Lost fanout                                                                  ;
 ; drop_notes:display|rate_driver:eighth_note|t[0..8]                                                                                                                                                                                                                                 ; Stuck at GND due to stuck port clock                                         ;
 ; drop_notes:display|rate_driver:eighth_note|beat                                                                                                                                                                                                                                    ; Stuck at GND due to stuck port clock                                         ;
 ; drop_notes:display|rate_driver:eighth_note|t[9..24]                                                                                                                                                                                                                                ; Stuck at GND due to stuck port clock                                         ;
 ; drop_notes:display|y_counter:big_count|current_count[0..2]                                                                                                                                                                                                                         ; Stuck at GND due to stuck port clock                                         ;
 ; drop_notes:display|y_counter:big_count|counted                                                                                                                                                                                                                                     ; Stuck at GND due to stuck port clock                                         ;
-; drop_notes:display|x_counter:rows|inc_y                                                                                                                                                                                                                                            ; Lost fanout                                                                  ;
 ; drop_notes:display|y_counter:big_count|printed_register                                                                                                                                                                                                                            ; Stuck at GND due to stuck port clock                                         ;
 ; drop_notes:display|x_counter:rows|current_count[0..2]                                                                                                                                                                                                                              ; Stuck at GND due to stuck port clock                                         ;
+; drop_notes:display|x_counter:rows|inc_y                                                                                                                                                                                                                                            ; Stuck at GND due to stuck port clock                                         ;
 ; drop_notes:display|notes_register:notes|shift_register:orange5|bit_shift_reg[0..7]                                                                                                                                                                                                 ; Stuck at GND due to stuck port clock                                         ;
 ; drop_notes:display|notes_register:notes|shift_register:blue4|bit_shift_reg[0..7]                                                                                                                                                                                                   ; Stuck at GND due to stuck port clock                                         ;
 ; drop_notes:display|notes_register:notes|shift_register:yellow3|bit_shift_reg[0..7]                                                                                                                                                                                                 ; Stuck at GND due to stuck port clock                                         ;
 ; drop_notes:display|notes_register:notes|shift_register:red2|bit_shift_reg[0..7]                                                                                                                                                                                                    ; Stuck at GND due to stuck port clock                                         ;
 ; drop_notes:display|notes_register:notes|shift_register:green1|bit_shift_reg[0..7]                                                                                                                                                                                                  ; Stuck at GND due to stuck port clock                                         ;
+; drop_notes:display|find_x_and_y:calculator|enablePlotter                                                                                                                                                                                                                           ; Stuck at GND due to stuck port clock                                         ;
 ; play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|audio_in_available                                                                                                                                                                                                  ; Lost fanout                                                                  ;
 ; play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|left_audio_fifo_read_space[6,7]                                                                                                                               ; Lost fanout                                                                  ;
 ; play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|right_audio_fifo_read_space[6,7]                                                                                                                              ; Lost fanout                                                                  ;
@@ -521,6 +535,15 @@ Encoding Type:  One-Hot
 ; play_song:smoke_on_the_water|avconf:avc|I2C_Controller:u0|ACK2                                                                                                                                                                                                                     ; Stuck at GND due to stuck port data_in                                       ;
 ; play_song:smoke_on_the_water|avconf:avc|I2C_Controller:u0|ACK3                                                                                                                                                                                                                     ; Stuck at GND due to stuck port data_in                                       ;
 ; gameplay:play_game|note_miss                                                                                                                                                                                                                                                       ; Lost fanout                                                                  ;
+; drop_notes:display|plotter:myPlotter|colour_calc.111111111                                                                                                                                                                                                                         ; Stuck at GND due to stuck port clock                                         ;
+; drop_notes:display|plotter:myPlotter|colour_calc~5                                                                                                                                                                                                                                 ; Lost fanout                                                                  ;
+; drop_notes:display|plotter:myPlotter|colour_calc~6                                                                                                                                                                                                                                 ; Lost fanout                                                                  ;
+; drop_notes:display|plotter:myPlotter|colour_calc~7                                                                                                                                                                                                                                 ; Lost fanout                                                                  ;
+; drop_notes:display|plotter:myPlotter|colour_calc~8                                                                                                                                                                                                                                 ; Lost fanout                                                                  ;
+; drop_notes:display|plotter:myPlotter|colour_calc~9                                                                                                                                                                                                                                 ; Lost fanout                                                                  ;
+; drop_notes:display|plotter:myPlotter|colour_calc~10                                                                                                                                                                                                                                ; Lost fanout                                                                  ;
+; drop_notes:display|plotter:myPlotter|colour_calc~11                                                                                                                                                                                                                                ; Lost fanout                                                                  ;
+; drop_notes:display|plotter:myPlotter|colour_calc~12                                                                                                                                                                                                                                ; Lost fanout                                                                  ;
 ; drop_notes:display|control:myControl|current_state~2                                                                                                                                                                                                                               ; Lost fanout                                                                  ;
 ; drop_notes:display|control:myControl|current_state.DRAW                                                                                                                                                                                                                            ; Stuck at GND due to stuck port clock                                         ;
 ; drop_notes:display|control:myControl|current_state.DEC_REG                                                                                                                                                                                                                         ; Lost fanout                                                                  ;
@@ -679,10 +702,10 @@ Encoding Type:  One-Hot
 ;                                                                                                                                                                                                                                                ;                           ; gameplay:play_game|next_state.LOAD, gameplay:play_game|next_state.WAIT_FOR_STRUM                                                                                                                                                                                                 ;
 ; gameplay:play_game|next_state2~6                                                                                                                                                                                                               ; Lost Fanouts              ; gameplay:play_game|current_state2.NO_NOTES, gameplay:play_game|current_state2.READ,                                                                                                                                                                                              ;
 ;                                                                                                                                                                                                                                                ;                           ; gameplay:play_game|next_state2.NO_NOTES                                                                                                                                                                                                                                          ;
-; drop_notes:display|plotter:myPlotter|colour_to_VGA[2]                                                                                                                                                                                          ; Stuck at GND              ; drop_notes:display|find_x_and_y:calculator|enablePlotter,                                                                                                                                                                                                                        ;
-;                                                                                                                                                                                                                                                ; due to stuck port clock   ; drop_notes:display|x_counter:rows|inc_y                                                                                                                                                                                                                                          ;
 ; gameplay:play_game|current_state2~2                                                                                                                                                                                                            ; Lost Fanouts              ; gameplay:play_game|next_state2.NOTES_IN, gameplay:play_game|next_state2.CHECK                                                                                                                                                                                                    ;
 ; drop_notes:display|plotter:myPlotter|plotterDone                                                                                                                                                                                               ; Stuck at GND              ; drop_notes:display|x_counter:rows|current_count[2]                                                                                                                                                                                                                               ;
+;                                                                                                                                                                                                                                                ; due to stuck port clock   ;                                                                                                                                                                                                                                                                                  ;
+; drop_notes:display|y_counter:big_count|current_count[0]                                                                                                                                                                                        ; Stuck at GND              ; drop_notes:display|find_x_and_y:calculator|enablePlotter                                                                                                                                                                                                                         ;
 ;                                                                                                                                                                                                                                                ; due to stuck port clock   ;                                                                                                                                                                                                                                                                                  ;
 ; play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|empty_dff ; Lost Fanouts              ; play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|done_adc_channel_sync                                                                                                                                                                                             ;
 ; play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Clock_Edge:DAC_Left_Right_Clock_Edges|last_test_clk                                                                                                                   ; Lost Fanouts              ; play_song:smoke_on_the_water|Audio_Controller:Audio_Controller|Altera_UP_Clock_Edge:DAC_Left_Right_Clock_Edges|cur_test_clk                                                                                                                                                      ;
@@ -722,10 +745,10 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |super_guitar_boy|drop_notes:display|vga_adapter:VGA|vga_controller:controller|yCounter[0]                                                   ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |super_guitar_boy|play_song:smoke_on_the_water|avconf:avc|I2C_Controller:u0|SD_COUNTER[3]                                                    ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |super_guitar_boy|drop_notes:display|vga_adapter:VGA|vga_controller:controller|yCounter[4]                                                   ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |super_guitar_boy|play_song:smoke_on_the_water|avconf:avc|I2C_Controller:u0|SD_COUNTER[5]                                                    ;
 ; 9:1                ; 9 bits    ; 54 LEs        ; 54 LEs               ; 0 LEs                  ; No         ; |super_guitar_boy|drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_j0o1:auto_generated|mux_8hb:mux3|l4_w0_n0_mux_dataout ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |super_guitar_boy|gameplay:play_game|Selector0                                                                                               ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |super_guitar_boy|gameplay:play_game|Selector2                                                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -2060,6 +2083,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
 +----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; colour   ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "colour[8..1]" will be connected to GND.                                     ;
 ; plot     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
 ; plot[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
 +----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2211,10 +2235,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Nov 27 17:22:13 2018
+    Info: Processing started: Tue Nov 27 22:39:53 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off super_guitar_boy -c super_guitar_boy
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 2 entities, in source file drop_keys_safety.v
+    Info (12023): Found entity 1: drop_notes File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_keys_safety.v Line: 14
+    Info (12023): Found entity 2: rate_driver File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_keys_safety.v Line: 259
 Info (12021): Found 1 design units, including 1 entities, in source file drop_notes/vga_pll.v
     Info (12023): Found entity 1: vga_pll File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/vga_pll.v Line: 36
 Info (12021): Found 1 design units, including 1 entities, in source file drop_notes/vga_controller.v
@@ -2223,16 +2250,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file drop_no
     Info (12023): Found entity 1: vga_address_translator File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/vga_address_translator.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file drop_notes/vga_adapter.v
     Info (12023): Found entity 1: vga_adapter File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/vga_adapter.v Line: 78
-Info (12021): Found 9 design units, including 9 entities, in source file drop_notes/drop_keys_safety.v
-    Info (12023): Found entity 1: drop_notes File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 24
-    Info (12023): Found entity 2: notes_register File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 296
-    Info (12023): Found entity 3: find_x_and_y File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 339
-    Info (12023): Found entity 4: plotter File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 391
-    Info (12023): Found entity 5: y_counter File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 473
-    Info (12023): Found entity 6: x_counter File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 517
-    Info (12023): Found entity 7: rate_driver File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 560
-    Info (12023): Found entity 8: control File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 595
-    Info (12023): Found entity 9: shift_register File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 688
 Info (12021): Found 1 design units, including 1 entities, in source file gameplay/audio_output/avconf/i2c_controller.v
     Info (12023): Found entity 1: I2C_Controller File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/audio_output/avconf/I2C_Controller.v Line: 43
 Info (12021): Found 1 design units, including 1 entities, in source file gameplay/audio_output/avconf/avconf.v
@@ -2269,18 +2286,29 @@ Info (12021): Found 1 design units, including 1 entities, in source file gamepla
     Info (12023): Found entity 1: play_song File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/audio_output/play_song.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file super_guitar_boy.v
     Info (12023): Found entity 1: super_guitar_boy File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at drop_keys_safety.v(150): created implicit net for "CLOCK_50" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 150
-Warning (10236): Verilog HDL Implicit Net warning at super_guitar_boy.v(60): created implicit net for "AUD_ADCDAT" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 60
-Warning (10236): Verilog HDL Implicit Net warning at super_guitar_boy.v(62): created implicit net for "AUD_BCLK" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 62
-Warning (10236): Verilog HDL Implicit Net warning at super_guitar_boy.v(63): created implicit net for "AUD_ADCLRCK" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 63
-Warning (10236): Verilog HDL Implicit Net warning at super_guitar_boy.v(64): created implicit net for "AUD_DACLRCK" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 64
-Warning (10236): Verilog HDL Implicit Net warning at super_guitar_boy.v(66): created implicit net for "FPGA_I2C_SDAT" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 66
-Warning (10236): Verilog HDL Implicit Net warning at super_guitar_boy.v(68): created implicit net for "AUD_XCK" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 68
-Warning (10236): Verilog HDL Implicit Net warning at super_guitar_boy.v(69): created implicit net for "AUD_DACDAT" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 69
-Warning (10236): Verilog HDL Implicit Net warning at super_guitar_boy.v(71): created implicit net for "FPGA_I2C_SCLK" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 71
+Info (12021): Found 1 design units, including 1 entities, in source file control.v
+    Info (12023): Found entity 1: control File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/control.v Line: 7
+Info (12021): Found 4 design units, including 4 entities, in source file plotter.v
+    Info (12023): Found entity 1: find_x_and_y File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 8
+    Info (12023): Found entity 2: plotter File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 60
+    Info (12023): Found entity 3: y_counter File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 161
+    Info (12023): Found entity 4: x_counter File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 205
+Info (12021): Found 2 design units, including 2 entities, in source file notes_register.v
+    Info (12023): Found entity 1: notes_register File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/notes_register.v Line: 7
+    Info (12023): Found entity 2: shift_register File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/notes_register.v Line: 43
+Warning (10236): Verilog HDL Implicit Net warning at drop_keys_safety.v(121): created implicit net for "CLOCK_50" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_keys_safety.v Line: 121
+Warning (10236): Verilog HDL Implicit Net warning at drop_keys_safety.v(232): created implicit net for "colour_out_real" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_keys_safety.v Line: 232
+Warning (10236): Verilog HDL Implicit Net warning at super_guitar_boy.v(58): created implicit net for "AUD_ADCDAT" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 58
+Warning (10236): Verilog HDL Implicit Net warning at super_guitar_boy.v(60): created implicit net for "AUD_BCLK" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 60
+Warning (10236): Verilog HDL Implicit Net warning at super_guitar_boy.v(61): created implicit net for "AUD_ADCLRCK" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 61
+Warning (10236): Verilog HDL Implicit Net warning at super_guitar_boy.v(62): created implicit net for "AUD_DACLRCK" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 62
+Warning (10236): Verilog HDL Implicit Net warning at super_guitar_boy.v(64): created implicit net for "FPGA_I2C_SDAT" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 64
+Warning (10236): Verilog HDL Implicit Net warning at super_guitar_boy.v(66): created implicit net for "AUD_XCK" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 66
+Warning (10236): Verilog HDL Implicit Net warning at super_guitar_boy.v(67): created implicit net for "AUD_DACDAT" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 67
+Warning (10236): Verilog HDL Implicit Net warning at super_guitar_boy.v(69): created implicit net for "FPGA_I2C_SCLK" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 69
 Info (12127): Elaborating entity "super_guitar_boy" for the top level hierarchy
 Warning (10034): Output port "LEDR[5]" at super_guitar_boy.v(14) has no driver File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 14
-Info (12128): Elaborating entity "play_song" for hierarchy "play_song:smoke_on_the_water" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 72
+Info (12128): Elaborating entity "play_song" for hierarchy "play_song:smoke_on_the_water" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 70
 Warning (10230): Verilog HDL assignment warning at play_song.v(75): truncated value with size 32 to match size of target (16) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/audio_output/play_song.v Line: 75
 Warning (10230): Verilog HDL assignment warning at play_song.v(96): truncated value with size 32 to match size of target (3) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/audio_output/play_song.v Line: 96
 Warning (10230): Verilog HDL assignment warning at play_song.v(101): truncated value with size 32 to match size of target (1) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/audio_output/play_song.v Line: 101
@@ -2427,44 +2455,44 @@ Info (12128): Elaborating entity "I2C_Controller" for hierarchy "play_song:smoke
 Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(79): truncated value with size 32 to match size of target (1) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/audio_output/avconf/I2C_Controller.v Line: 79
 Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(78): truncated value with size 32 to match size of target (1) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/audio_output/avconf/I2C_Controller.v Line: 78
 Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(91): truncated value with size 32 to match size of target (6) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/audio_output/avconf/I2C_Controller.v Line: 91
-Info (12128): Elaborating entity "gameplay" for hierarchy "gameplay:play_game" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 85
+Info (12128): Elaborating entity "gameplay" for hierarchy "gameplay:play_game" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 83
 Warning (10230): Verilog HDL assignment warning at gameplay.v(50): truncated value with size 32 to match size of target (9) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/gameplay.v Line: 50
 Info (10264): Verilog HDL Case Statement information at gameplay.v(100): all case item expressions in this case statement are onehot File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/gameplay.v Line: 100
-Info (12128): Elaborating entity "drop_notes" for hierarchy "drop_notes:display" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 106
-Info (12128): Elaborating entity "control" for hierarchy "drop_notes:display|control:myControl" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 170
-Warning (10270): Verilog HDL Case Statement warning at drop_keys_safety.v(650): incomplete case statement has no default case item File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 650
-Info (10264): Verilog HDL Case Statement information at drop_keys_safety.v(650): all case item expressions in this case statement are onehot File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 650
-Warning (10034): Output port "FSM_pause" at drop_keys_safety.v(614) has no driver File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 614
-Info (12128): Elaborating entity "find_x_and_y" for hierarchy "drop_notes:display|find_x_and_y:calculator" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 186
-Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(373): truncated value with size 32 to match size of target (9) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 373
-Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(374): truncated value with size 32 to match size of target (9) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 374
-Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(376): truncated value with size 32 to match size of target (9) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 376
-Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(377): truncated value with size 32 to match size of target (9) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 377
-Warning (10270): Verilog HDL Case Statement warning at drop_keys_safety.v(372): incomplete case statement has no default case item File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 372
-Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(380): truncated value with size 32 to match size of target (8) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 380
-Warning (10240): Verilog HDL Always Construct warning at drop_keys_safety.v(372): inferring latch(es) for variable "x_to_plotter", which holds its previous value in one or more paths through the always construct File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 372
-Warning (10034): Output port "done_x_and_y" at drop_keys_safety.v(353) has no driver File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 353
-Info (10041): Inferred latch for "x_to_plotter[0]" at drop_keys_safety.v(372) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 372
-Info (10041): Inferred latch for "x_to_plotter[1]" at drop_keys_safety.v(372) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 372
-Info (10041): Inferred latch for "x_to_plotter[2]" at drop_keys_safety.v(372) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 372
-Info (10041): Inferred latch for "x_to_plotter[3]" at drop_keys_safety.v(372) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 372
-Info (10041): Inferred latch for "x_to_plotter[4]" at drop_keys_safety.v(372) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 372
-Info (10041): Inferred latch for "x_to_plotter[5]" at drop_keys_safety.v(372) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 372
-Info (10041): Inferred latch for "x_to_plotter[6]" at drop_keys_safety.v(372) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 372
-Info (10041): Inferred latch for "x_to_plotter[7]" at drop_keys_safety.v(372) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 372
-Info (10041): Inferred latch for "x_to_plotter[8]" at drop_keys_safety.v(372) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 372
-Info (12128): Elaborating entity "notes_register" for hierarchy "drop_notes:display|notes_register:notes" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 200
-Info (12128): Elaborating entity "shift_register" for hierarchy "drop_notes:display|notes_register:notes|shift_register:green1" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 314
-Info (12128): Elaborating entity "x_counter" for hierarchy "drop_notes:display|x_counter:rows" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 214
-Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(545): truncated value with size 32 to match size of target (3) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 545
-Info (12128): Elaborating entity "y_counter" for hierarchy "drop_notes:display|y_counter:big_count" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 226
-Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(492): truncated value with size 32 to match size of target (3) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 492
-Info (12128): Elaborating entity "rate_driver" for hierarchy "drop_notes:display|rate_driver:eighth_note" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 234
-Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(581): truncated value with size 32 to match size of target (25) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 581
-Info (12128): Elaborating entity "plotter" for hierarchy "drop_notes:display|plotter:myPlotter" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 251
-Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(416): truncated value with size 32 to match size of target (4) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 416
-Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(433): truncated value with size 32 to match size of target (4) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 433
-Info (12128): Elaborating entity "vga_adapter" for hierarchy "drop_notes:display|vga_adapter:VGA" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 273
+Info (12128): Elaborating entity "drop_notes" for hierarchy "drop_notes:display" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 104
+Info (12128): Elaborating entity "control" for hierarchy "drop_notes:display|control:myControl" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_keys_safety.v Line: 141
+Warning (10270): Verilog HDL Case Statement warning at control.v(62): incomplete case statement has no default case item File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/control.v Line: 62
+Info (10264): Verilog HDL Case Statement information at control.v(62): all case item expressions in this case statement are onehot File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/control.v Line: 62
+Warning (10034): Output port "FSM_pause" at control.v(26) has no driver File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/control.v Line: 26
+Info (12128): Elaborating entity "find_x_and_y" for hierarchy "drop_notes:display|find_x_and_y:calculator" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_keys_safety.v Line: 157
+Warning (10230): Verilog HDL assignment warning at plotter.v(42): truncated value with size 32 to match size of target (9) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 42
+Warning (10230): Verilog HDL assignment warning at plotter.v(43): truncated value with size 32 to match size of target (9) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 43
+Warning (10230): Verilog HDL assignment warning at plotter.v(45): truncated value with size 32 to match size of target (9) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 45
+Warning (10230): Verilog HDL assignment warning at plotter.v(46): truncated value with size 32 to match size of target (9) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 46
+Warning (10270): Verilog HDL Case Statement warning at plotter.v(41): incomplete case statement has no default case item File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 41
+Warning (10230): Verilog HDL assignment warning at plotter.v(49): truncated value with size 32 to match size of target (8) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 49
+Warning (10240): Verilog HDL Always Construct warning at plotter.v(41): inferring latch(es) for variable "x_to_plotter", which holds its previous value in one or more paths through the always construct File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 41
+Warning (10034): Output port "done_x_and_y" at plotter.v(22) has no driver File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 22
+Info (10041): Inferred latch for "x_to_plotter[0]" at plotter.v(41) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 41
+Info (10041): Inferred latch for "x_to_plotter[1]" at plotter.v(41) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 41
+Info (10041): Inferred latch for "x_to_plotter[2]" at plotter.v(41) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 41
+Info (10041): Inferred latch for "x_to_plotter[3]" at plotter.v(41) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 41
+Info (10041): Inferred latch for "x_to_plotter[4]" at plotter.v(41) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 41
+Info (10041): Inferred latch for "x_to_plotter[5]" at plotter.v(41) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 41
+Info (10041): Inferred latch for "x_to_plotter[6]" at plotter.v(41) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 41
+Info (10041): Inferred latch for "x_to_plotter[7]" at plotter.v(41) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 41
+Info (10041): Inferred latch for "x_to_plotter[8]" at plotter.v(41) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 41
+Info (12128): Elaborating entity "notes_register" for hierarchy "drop_notes:display|notes_register:notes" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_keys_safety.v Line: 171
+Info (12128): Elaborating entity "shift_register" for hierarchy "drop_notes:display|notes_register:notes|shift_register:green1" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/notes_register.v Line: 25
+Info (12128): Elaborating entity "x_counter" for hierarchy "drop_notes:display|x_counter:rows" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_keys_safety.v Line: 185
+Warning (10230): Verilog HDL assignment warning at plotter.v(233): truncated value with size 32 to match size of target (3) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 233
+Info (12128): Elaborating entity "y_counter" for hierarchy "drop_notes:display|y_counter:big_count" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_keys_safety.v Line: 197
+Warning (10230): Verilog HDL assignment warning at plotter.v(180): truncated value with size 32 to match size of target (3) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 180
+Info (12128): Elaborating entity "rate_driver" for hierarchy "drop_notes:display|rate_driver:eighth_note" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_keys_safety.v Line: 205
+Warning (10230): Verilog HDL assignment warning at drop_keys_safety.v(280): truncated value with size 32 to match size of target (25) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_keys_safety.v Line: 280
+Info (12128): Elaborating entity "plotter" for hierarchy "drop_notes:display|plotter:myPlotter" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_keys_safety.v Line: 222
+Warning (10230): Verilog HDL assignment warning at plotter.v(86): truncated value with size 32 to match size of target (4) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 86
+Warning (10230): Verilog HDL assignment warning at plotter.v(103): truncated value with size 32 to match size of target (4) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 103
+Info (12128): Elaborating entity "vga_adapter" for hierarchy "drop_notes:display|vga_adapter:VGA" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_keys_safety.v Line: 244
 Info (12128): Elaborating entity "vga_address_translator" for hierarchy "drop_notes:display|vga_adapter:VGA|vga_address_translator:user_input_translator" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/vga_adapter.v Line: 192
 Info (12128): Elaborating entity "altsyncram" for hierarchy "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/vga_adapter.v Line: 213
 Info (12130): Elaborated megafunction instantiation "drop_notes:display|vga_adapter:VGA|altsyncram:VideoMemory" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/vga_adapter.v Line: 213
@@ -2515,7 +2543,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/altp
     Info (12023): Found entity 1: altpll_80u File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/db/altpll_80u.tdf Line: 25
 Info (12128): Elaborating entity "altpll_80u" for hierarchy "drop_notes:display|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
 Info (12128): Elaborating entity "vga_controller" for hierarchy "drop_notes:display|vga_adapter:VGA|vga_controller:controller" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/vga_adapter.v Line: 262
-Info (12128): Elaborating entity "scoring" for hierarchy "scoring:player_score" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 116
+Info (12128): Elaborating entity "scoring" for hierarchy "scoring:player_score" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 114
 Warning (10235): Verilog HDL Always Construct warning at scoring.v(15): variable "reset_n" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/scoring.v Line: 15
 Warning (10235): Verilog HDL Always Construct warning at scoring.v(17): variable "multiplier" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/scoring.v Line: 17
 Warning (10235): Verilog HDL Always Construct warning at scoring.v(18): variable "multiplier" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/scoring.v Line: 18
@@ -2554,7 +2582,7 @@ Info (10041): Inferred latch for "multiplier[0]" at scoring.v(13) File: C:/Users
 Info (10041): Inferred latch for "multiplier[1]" at scoring.v(13) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/scoring.v Line: 13
 Info (10041): Inferred latch for "multiplier[2]" at scoring.v(13) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/scoring.v Line: 13
 Info (10041): Inferred latch for "multiplier[3]" at scoring.v(13) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/scoring.v Line: 13
-Info (12128): Elaborating entity "bcd_converter" for hierarchy "bcd_converter:bcd_score" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 123
+Info (12128): Elaborating entity "bcd_converter" for hierarchy "bcd_converter:bcd_score" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 121
 Warning (10230): Verilog HDL assignment warning at bcd_converter.v(33): truncated value with size 32 to match size of target (4) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/bcd_converter.v Line: 33
 Warning (10230): Verilog HDL assignment warning at bcd_converter.v(30): truncated value with size 32 to match size of target (4) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/bcd_converter.v Line: 30
 Warning (10230): Verilog HDL assignment warning at bcd_converter.v(27): truncated value with size 32 to match size of target (4) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/bcd_converter.v Line: 27
@@ -2562,11 +2590,11 @@ Warning (10230): Verilog HDL assignment warning at bcd_converter.v(24): truncate
 Warning (10230): Verilog HDL assignment warning at bcd_converter.v(21): truncated value with size 32 to match size of target (4) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/bcd_converter.v Line: 21
 Warning (10230): Verilog HDL assignment warning at bcd_converter.v(18): truncated value with size 32 to match size of target (4) File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/bcd_converter.v Line: 18
 Warning (10240): Verilog HDL Always Construct warning at bcd_converter.v(11): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/bcd_converter.v Line: 11
-Info (12128): Elaborating entity "HEX_Display" for hierarchy "HEX_Display:hex0" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 128
+Info (12128): Elaborating entity "HEX_Display" for hierarchy "HEX_Display:hex0" File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 126
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "score[20]" is missing source, defaulting to GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 50
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "drop_notes:display|CLOCK_50" is missing source, defaulting to GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 150
+    Warning (12110): Net "drop_notes:display|CLOCK_50" is missing source, defaulting to GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_keys_safety.v Line: 121
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "score[20]" is missing source, defaulting to GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 50
 Warning (12011): Net is missing source, defaulting to GND
@@ -3042,7 +3070,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 14
     Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 20
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 359 registers lost all their fanouts during netlist optimizations.
+Info (17049): 365 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/Jaden Reimer/Documents/GitHub/241-project/output_files/super_guitar_boy.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
@@ -3104,11 +3132,11 @@ Info (21057): Implemented 324 device resources after synthesis - the final resou
     Info (21061): Implemented 101 logic cells
     Info (21064): Implemented 90 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 586 warnings
-    Info: Peak virtual memory: 4884 megabytes
-    Info: Processing ended: Tue Nov 27 17:22:40 2018
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:52
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 587 warnings
+    Info: Peak virtual memory: 4890 megabytes
+    Info: Processing ended: Tue Nov 27 22:40:24 2018
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:00:55
 
 
 +------------------------------------------+

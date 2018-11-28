@@ -1,4 +1,3 @@
-Warning (10268): Verilog HDL information at drop_keys_safety.v(372): always construct contains both blocking and non-blocking assignments File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes/drop_keys_safety.v Line: 372
 Warning (10268): Verilog HDL information at bcd_converter.v(11): always construct contains both blocking and non-blocking assignments File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/gameplay/bcd_converter.v Line: 11
 Info (10281): Verilog HDL Declaration information at super_guitar_boy.v(7): object "HEX0" differs only in case from object "hex0" in the same scope File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 7
 Info (10281): Verilog HDL Declaration information at super_guitar_boy.v(8): object "HEX1" differs only in case from object "hex1" in the same scope File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 8
@@ -6,3 +5,5 @@ Info (10281): Verilog HDL Declaration information at super_guitar_boy.v(9): obje
 Info (10281): Verilog HDL Declaration information at super_guitar_boy.v(10): object "HEX3" differs only in case from object "hex3" in the same scope File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 10
 Info (10281): Verilog HDL Declaration information at super_guitar_boy.v(11): object "HEX4" differs only in case from object "hex4" in the same scope File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 11
 Info (10281): Verilog HDL Declaration information at super_guitar_boy.v(12): object "HEX5" differs only in case from object "hex5" in the same scope File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/super_guitar_boy.v Line: 12
+Warning (10268): Verilog HDL information at plotter.v(41): always construct contains both blocking and non-blocking assignments File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 41
+Warning (10268): Verilog HDL information at plotter.v(76): always construct contains both blocking and non-blocking assignments File: C:/Users/Jaden Reimer/Documents/GitHub/241-project/plotter.v Line: 76

@@ -1,4 +1,9 @@
 
+State Machine - |super_guitar_boy|drop_notes:display|plotter:myPlotter|colour_calc
+Name colour_calc.111111111 
+colour_calc.000000000 0 
+colour_calc.111111111 1 
+
 State Machine - |super_guitar_boy|drop_notes:display|control:myControl|current_state
 Name current_state.ERASE current_state.WAIT current_state.DEC_REG current_state.MAIN current_state.DRAW 
 current_state.MAIN 0 0 0 0 0 

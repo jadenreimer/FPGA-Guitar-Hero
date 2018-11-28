@@ -48,9 +48,7 @@ module super_guitar_boy(
 	wire note_miss;
 	
 	wire [20:0]score;
-	
 	wire [24:0]score_bcd;
-	
 	wire [4:0] notes_to_play;
 	
 	play_song smoke_on_the_water(.clk(CLOCK_50),
@@ -83,7 +81,7 @@ module super_guitar_boy(
 							 .note_hit(note_hit),
 							 .note_miss(note_miss)
 							 );
-							 
+	
 	drop_notes display(
 							.clk(CLOCK_50),							//On Board 50 MHz
 							.reset(reset),							// On Board Keys

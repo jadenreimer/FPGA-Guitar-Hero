@@ -309,12 +309,12 @@ set_location_assignment PIN_E12 -to VGA_R[6]
 set_location_assignment PIN_F13 -to VGA_R[7]
 set_location_assignment PIN_C10 -to VGA_SYNC_N
 set_location_assignment PIN_D11 -to VGA_VS
+set_global_assignment -name VERILOG_FILE drop_keys_safety.v
 set_global_assignment -name VERILOG_FILE drop_notes/vga_pll.v
 set_global_assignment -name VERILOG_FILE drop_notes/vga_controller.v
 set_global_assignment -name VERILOG_FILE drop_notes/vga_address_translator.v
 set_global_assignment -name VERILOG_FILE drop_notes/vga_adapter.v
 set_global_assignment -name MIF_FILE drop_notes/guitar_hero_background.mif
-set_global_assignment -name VERILOG_FILE drop_notes/drop_keys_safety.v
 set_global_assignment -name VERILOG_FILE gameplay/audio_output/avconf/I2C_Controller.v
 set_global_assignment -name VERILOG_FILE gameplay/audio_output/avconf/avconf.v
 set_global_assignment -name VERILOG_FILE gameplay/audio_output/Audio_Controller/Audio_Controller.v
@@ -333,4 +333,7 @@ set_global_assignment -name VERILOG_FILE gameplay/note_sender/note_sender.v
 set_global_assignment -name VERILOG_FILE gameplay/GPIO_input/GPIO_input.v
 set_global_assignment -name VERILOG_FILE gameplay/audio_output/play_song.v
 set_global_assignment -name VERILOG_FILE super_guitar_boy.v
+set_global_assignment -name VERILOG_FILE control.v
+set_global_assignment -name VERILOG_FILE plotter.v
+set_global_assignment -name VERILOG_FILE notes_register.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
