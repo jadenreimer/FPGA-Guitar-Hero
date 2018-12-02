@@ -87,22 +87,12 @@ reg [2:0] count2 = 3'd0;
 
 always @(posedge clk)
 begin
-	if (~stop)
-	begin
+	count2<=count2+1;
 	
-		if (~pause)
-		begin
-		
-			count2<=count2+1;
-			
-			if (count2 == 3'd2)
-			begin
-				count2 <= 3'd0;
-				CLOCK_8 <= CLOCK_8 ? 0:1;
-			end
-			
-		end
-		
+	if (count2 == 3'd2)
+	begin
+		count2 <= 3'd0;
+		CLOCK_8 <= CLOCK_8 ? 0:1;
 	end
 	
 end

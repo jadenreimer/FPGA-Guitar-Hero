@@ -164,7 +164,7 @@
 		
 		.shiftEnable(FSM_shift), // Controls if the FSM is telling it to drop down
 		.y_level(current_y),
-		.FSM_notes(switches[4:0]/*chorus_notes*/), // Input for the notes being loaded from the chorus, or switches for debugging
+		.chorus_notes(switches[4:0]/*chorus_notes*/), // Input for the notes being loaded from the chorus, or switches for debugging
 		
 		.note_to_play(notes_to_play), // Loose end right now, disconnected
 		.register_notes_out(register_data) // The value of the data being read (I expect this needs to be a reg but I'm not certain)
@@ -249,38 +249,3 @@
 	
 endmodule
 
-
-/*
- * -------------------------------------------------------------------------------------------------------------------------------
- * Rate driver: driven high every "beat"
- * -------------------------------------------------------------------------------------------------------------------------------
- */
- 
-module rate_driver (
-
-    input clk,
-	 
-    output reg beat
-);
-	
-	localparam EIGHTH_NOTE = 25'd13157895;
-	
-	reg [24:0] t = 25'd0;
-	
-	always@(posedge clk)
-	begin
-		if (t == EIGHTH_NOTE)
-		begin
-			t <= 25'd0;
-			beat <= 1'b1;
-		end
-		
-		else
-		begin
-			t <= t+1;
-			beat <= 1'b0;
-		end
-			
-	end
-
-endmodule

@@ -20,7 +20,18 @@ module super_guitar_boy(
 								output VGA_SYNC_N,
 								output [7:0] VGA_R,
 								output [7:0] VGA_G,
-								output [7:0] VGA_B
+								output [7:0] VGA_B,
+								
+								//Audio
+								inout AUD_ADCDAT,
+								inout AUD_BCLK,
+								inout AUD_ADCLRCK,
+								inout AUD_DACLRCK,
+								inout FPGA_I2C_SDAT,
+								
+								output AUD_XCK,
+								output AUD_DACDAT,
+								output FPGA_I2C_SCLK
 								);
 								
 	//assigning GPIO from guitar to internal wires
@@ -30,7 +41,7 @@ module super_guitar_boy(
 	wire strum;
 	assign strum = GPIO_0[0];
 	
-	//assigning pause and stop buttons
+	//assigning pause and stop buttons 
 	wire stop;
 	assign stop = SW[0];
 	
@@ -49,22 +60,41 @@ module super_guitar_boy(
 	wire [24:0]score_bcd;
 	wire [4:0] notes_to_play;
 	
-	play_song smoke_on_the_water(.clk(CLOCK_50),
-										  .pause(pause),
-										  .stop(stop),
+	display (
+			.clk(CLOCK_50),							//On Board 50 MHz
+			.switches(SW[9:0]),								// On Board Switches for debugging
+			.keys(KEY[3:0]),								// On Board Keys
+			
+//			.correct_notes(correct_notes),
+			
+			.notes_to_play(notes_to_play),					// Notes to comparator
+			
+			.VGA_CLK(VGA_CLK),   						//	VGA Clock
+			.VGA_HS(VGA_HS),							//	VGA H_SYNC
+			.VGA_VS(VGA_VS),							//	VGA V_SYNC
+			.VGA_BLANK_N(VGA_BLANK_N),						//	VGA BLANK
+			.VGA_SYNC_N(VGA_SYNC_N),						//	VGA SYNC
+			.VGA_R(VGA_R),   						//	VGA Red[9:0]
+			.VGA_G(VGA_G),	 						//	VGA Green[9:0]
+			.VGA_B(VGA_B)	 		  					//	VGA Blue[9:0]
+			);
+	
+	play_song smoke_on_the_water(.clk(CLOCK_50), // input
+										  .pause(pause), // inout
+										  .stop(stop), // inout
 
-										  .AUD_ADCDAT(AUD_ADCDAT),
+										  .AUD_ADCDAT(AUD_ADCDAT), // inout
 
-										  .AUD_BCLK(AUD_BCLK),
-										  .AUD_ADCLRCK(AUD_ADCLRCK),
-										  .AUD_DACLRCK(AUD_DACLRCK),
+										  .AUD_BCLK(AUD_BCLK), // inout
+										  .AUD_ADCLRCK(AUD_ADCLRCK), // inout
+										  .AUD_DACLRCK(AUD_DACLRCK), // inout
 
-										  .FPGA_I2C_SDAT(FPGA_I2C_SDAT),
+										  .FPGA_I2C_SDAT(FPGA_I2C_SDAT), // inout
 
-										  .AUD_XCK(AUD_XCK),
-										  .AUD_DACDAT(AUD_DACDAT),
+										  .AUD_XCK(AUD_XCK), // output
+										  .AUD_DACDAT(AUD_DACDAT), // output
 
-										  .FPGA_I2C_SCLK(FPGA_I2C_SCLK)
+										  .FPGA_I2C_SCLK(FPGA_I2C_SCLK) // output
 										  );
 										  
 	gameplay play_game(
@@ -80,26 +110,26 @@ module super_guitar_boy(
 							 .note_miss(note_miss)
 							 );
 	
-	drop_notes display(
-							.clk(CLOCK_50),							//On Board 50 MHz
-							.reset(0),							// On Board Keys
-							.switches(SW[9:5]),
-							
-							.pause(pause),
-							.stop(~KEY[3]),
-//							.correct_notes(),					// Input to determine if the row should be blacked out or set to white
-							
-							.notes_to_play(notes_to_play),				// Notes to comparator
-							
-							.VGA_CLK(VGA_CLK),   						//	VGA Clock
-							.VGA_HS(VGA_HS),							//	VGA H_SYNC
-							.VGA_VS(VGA_VS),							//	VGA V_SYNC
-							.VGA_BLANK_N(VGA_BLANK_N),						//	VGA BLANK
-							.VGA_SYNC_N(VGA_SYNC_N),						//	VGA SYNC
-							.VGA_R(VGA_R),   						//	VGA Red[9:0]
-							.VGA_G(VGA_G),	 						//	VGA Green[9:0]
-							.VGA_B(VGA_B)
-							);
+//	drop_notes display(
+//							.clk(CLOCK_50),							//On Board 50 MHz
+//							.reset(0),							// On Board Keys
+//							.switches(SW[9:5]),
+//							
+//							.pause(pause),
+//							.stop(~KEY[3]),
+////							.correct_notes(),					// Input to determine if the row should be blacked out or set to white
+//							
+//							.notes_to_play(notes_to_play),				// Notes to comparator
+//							
+//							.VGA_CLK(VGA_CLK),   						//	VGA Clock
+//							.VGA_HS(VGA_HS),							//	VGA H_SYNC
+//							.VGA_VS(VGA_VS),							//	VGA V_SYNC
+//							.VGA_BLANK_N(VGA_BLANK_N),						//	VGA BLANK
+//							.VGA_SYNC_N(VGA_SYNC_N),						//	VGA SYNC
+//							.VGA_R(VGA_R),   						//	VGA Red[9:0]
+//							.VGA_G(VGA_G),	 						//	VGA Green[9:0]
+//							.VGA_B(VGA_B)
+//							);
 							 
 	scoring player_score(
 								.clk(CLOCK_50),

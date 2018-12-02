@@ -2,75 +2,219 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'display|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 30.190
+Type  : Slow 1100mV 85C Model Setup 'play_song:smoke_on_the_water|CLOCK_8'
+Slack : -6.270
+TNS   : -9614.278
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -4.594
+TNS   : -4.594
+
+Type  : Slow 1100mV 85C Model Setup 'play_song:smoke_on_the_water|avconf:avc|mI2C_CTRL_CLK'
+Slack : -2.536
+TNS   : -147.041
+
+Type  : Slow 1100mV 85C Model Setup 'comb_12|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 33.026
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'display|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.431
+Type  : Slow 1100mV 85C Model Hold 'play_song:smoke_on_the_water|CLOCK_8'
+Slack : 0.222
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'display|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Type  : Slow 1100mV 85C Model Hold 'play_song:smoke_on_the_water|avconf:avc|mI2C_CTRL_CLK'
+Slack : 0.291
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.382
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'comb_12|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.420
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'play_song:smoke_on_the_water|CLOCK_8'
+Slack : -2.174
+TNS   : -26022.292
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'play_song:smoke_on_the_water|avconf:avc|mI2C_CTRL_CLK'
+Slack : -0.394
+TNS   : -39.655
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'smoke_on_the_water|Audio_Controller|Audio_Clock|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.083
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'comb_12|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.850
+Slack : 8.852
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'display|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.758
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'comb_12|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 18.749
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Setup 'display|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 30.549
+Type  : Slow 1100mV 0C Model Setup 'play_song:smoke_on_the_water|CLOCK_8'
+Slack : -6.386
+TNS   : -9044.007
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -4.394
+TNS   : -4.394
+
+Type  : Slow 1100mV 0C Model Setup 'play_song:smoke_on_the_water|avconf:avc|mI2C_CTRL_CLK'
+Slack : -2.463
+TNS   : -141.093
+
+Type  : Slow 1100mV 0C Model Setup 'comb_12|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 33.348
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'display|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.415
+Type  : Slow 1100mV 0C Model Hold 'play_song:smoke_on_the_water|CLOCK_8'
+Slack : 0.205
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'display|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Type  : Slow 1100mV 0C Model Hold 'play_song:smoke_on_the_water|avconf:avc|mI2C_CTRL_CLK'
+Slack : 0.285
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'comb_12|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.392
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'play_song:smoke_on_the_water|CLOCK_8'
+Slack : -2.174
+TNS   : -26015.705
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'play_song:smoke_on_the_water|avconf:avc|mI2C_CTRL_CLK'
+Slack : -0.394
+TNS   : -38.637
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'smoke_on_the_water|Audio_Controller|Audio_Clock|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.083
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'comb_12|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.806
+Slack : 8.801
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'display|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.739
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'comb_12|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 18.722
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Setup 'display|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 33.221
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -3.623
+TNS   : -3.623
+
+Type  : Fast 1100mV 85C Model Setup 'play_song:smoke_on_the_water|CLOCK_8'
+Slack : -3.167
+TNS   : -5095.437
+
+Type  : Fast 1100mV 85C Model Setup 'play_song:smoke_on_the_water|avconf:avc|mI2C_CTRL_CLK'
+Slack : -1.236
+TNS   : -65.234
+
+Type  : Fast 1100mV 85C Model Setup 'comb_12|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 35.309
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'display|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.239
+Type  : Fast 1100mV 85C Model Hold 'play_song:smoke_on_the_water|avconf:avc|mI2C_CTRL_CLK'
+Slack : 0.099
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'display|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Type  : Fast 1100mV 85C Model Hold 'play_song:smoke_on_the_water|CLOCK_8'
+Slack : 0.136
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.183
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'comb_12|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.240
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'play_song:smoke_on_the_water|CLOCK_8'
+Slack : -2.174
+TNS   : -25619.415
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'play_song:smoke_on_the_water|avconf:avc|mI2C_CTRL_CLK'
+Slack : -0.002
+TNS   : -0.006
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'smoke_on_the_water|Audio_Controller|Audio_Clock|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.083
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'comb_12|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.839
+Slack : 8.837
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'display|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.879
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'comb_12|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 18.873
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Setup 'display|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 34.093
+Type  : Fast 1100mV 0C Model Setup 'play_song:smoke_on_the_water|CLOCK_8'
+Slack : -3.100
+TNS   : -4183.135
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -3.052
+TNS   : -3.052
+
+Type  : Fast 1100mV 0C Model Setup 'play_song:smoke_on_the_water|avconf:avc|mI2C_CTRL_CLK'
+Slack : -1.083
+TNS   : -55.697
+
+Type  : Fast 1100mV 0C Model Setup 'comb_12|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 35.876
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Hold 'display|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.221
+Type  : Fast 1100mV 0C Model Hold 'play_song:smoke_on_the_water|avconf:avc|mI2C_CTRL_CLK'
+Slack : 0.080
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'display|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Type  : Fast 1100mV 0C Model Hold 'play_song:smoke_on_the_water|CLOCK_8'
+Slack : 0.123
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.175
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'comb_12|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.211
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'play_song:smoke_on_the_water|CLOCK_8'
+Slack : -2.174
+TNS   : -25625.196
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'play_song:smoke_on_the_water|avconf:avc|mI2C_CTRL_CLK'
+Slack : 0.039
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'smoke_on_the_water|Audio_Controller|Audio_Clock|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.083
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'comb_12|VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
 TNS   : 0.000
 
@@ -78,8 +222,8 @@ Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : 8.828
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'display|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.881
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'comb_12|VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 18.876
 TNS   : 0.000
 
 ------------------------------------------------------------

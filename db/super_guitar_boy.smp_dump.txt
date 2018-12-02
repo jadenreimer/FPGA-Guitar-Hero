@@ -1,17 +1,4 @@
 
-State Machine - |super_guitar_boy|drop_notes:display|plotter:myPlotter|colour_calc
-Name colour_calc.111111111 
-colour_calc.000000000 0 
-colour_calc.111111111 1 
-
-State Machine - |super_guitar_boy|drop_notes:display|control:myControl|current_state
-Name current_state.ERASE current_state.WAIT current_state.DEC_REG current_state.MAIN current_state.DRAW 
-current_state.MAIN 0 0 0 0 0 
-current_state.DEC_REG 0 0 1 1 0 
-current_state.DRAW 0 0 0 1 1 
-current_state.WAIT 0 1 0 1 0 
-current_state.ERASE 1 0 0 1 0 
-
 State Machine - |super_guitar_boy|gameplay:play_game|current_state2
 Name current_state2.CHECK current_state2.READ current_state2.NOTES_IN current_state2.NO_NOTES 
 current_state2.NO_NOTES 0 0 0 0 
@@ -43,3 +30,11 @@ Name mSetup_ST.0000 mSetup_ST.0010 mSetup_ST.0001
 mSetup_ST.0000 0 0 0 
 mSetup_ST.0001 1 0 1 
 mSetup_ST.0010 1 1 0 
+
+State Machine - |super_guitar_boy|display:comb_12|ctrl:myControl|current_state
+Name current_state.ERASE current_state.WAIT current_state.DEC_REG current_state.MAIN current_state.DRAW 
+current_state.MAIN 0 0 0 0 0 
+current_state.DEC_REG 0 0 1 1 0 
+current_state.DRAW 0 0 0 1 1 
+current_state.WAIT 0 1 0 1 0 
+current_state.ERASE 1 0 0 1 0 

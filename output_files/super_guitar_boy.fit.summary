@@ -1,20 +1,20 @@
-Fitter Status : Successful - Tue Nov 27 23:27:20 2018
+Fitter Status : Successful - Wed Nov 28 10:10:52 2018
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : super_guitar_boy
 Top-level Entity Name : super_guitar_boy
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 59 / 32,070 ( < 1 % )
-Total registers : 42
-Total pins : 132 / 457 ( 29 % )
+Logic utilization (in ALMs) : 314 / 32,070 ( < 1 % )
+Total registers : 306
+Total pins : 140 / 457 ( 31 % )
 Total virtual pins : 0
-Total block memory bits : 691,200 / 4,065,280 ( 17 % )
-Total RAM Blocks : 86 / 397 ( 22 % )
+Total block memory bits : 2,796,544 / 4,065,280 ( 69 % )
+Total RAM Blocks : 344 / 397 ( 87 % )
 Total DSP Blocks : 0 / 87 ( 0 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0
 Total HSSI PMA TX Serializers : 0
-Total PLLs : 1 / 6 ( 17 % )
+Total PLLs : 2 / 6 ( 33 % )
 Total DLLs : 0 / 4 ( 0 % )

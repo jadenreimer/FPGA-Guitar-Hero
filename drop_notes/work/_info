@@ -29,73 +29,73 @@ Z9 !s90 -reportprogress|300|drop_keys.v|
 !i113 1
 Z10 tCvgOpt 0
 vcontrol
-Z11 !s110 1543208747
+Z11 !s110 1543434546
 !i10b 1
-!s100 mWGK:lTVohEnMNz5lfLe@0
-I`X]@a59Ldo`DCjjQ<0ilo1
+!s100 96OeolEM3]^?=BIEo9R0E0
+ID;Z?OK8aKZ333oEVNM]>>0
 R2
-R0
-w1543198975
-8control.v
-Fcontrol.v
-L0 1
+Z12 dC:/Users/Jaden Reimer/Documents/GitHub/241-project/drop_notes
+Z13 w1543297429
+R4
+R5
+L0 629
 R6
 r1
 !s85 0
 31
-Z12 !s108 1543208747.000000
-!s107 control.v|
-!s90 -reportprogress|300|control.v|
+Z14 !s108 1543434546.000000
+R8
+R9
 !i113 1
 R10
 vdatapath
-R11
+!s110 1543208747
 !i10b 1
 !s100 0cB?Jc11;lMMQfYOW3CX^1
 IUb9IaDbcF4;29k4Qk3RaB1
 R2
 R0
-Z13 w1543205082
-Z14 8datapath.v
-Z15 Fdatapath.v
+w1543205082
+8datapath.v
+Fdatapath.v
 L0 1
 R6
 r1
 !s85 0
 31
-R12
-Z16 !s107 datapath.v|
-Z17 !s90 -reportprogress|300|datapath.v|
+!s108 1543208747.000000
+!s107 datapath.v|
+!s90 -reportprogress|300|datapath.v|
 !i113 1
 R10
 vdrop_keys
 R11
 !i10b 1
-!s100 nPQ4BG4G@7o9@CXd4d_L11
-IT>>:Bkk:RNdLKQGNLmi@d3
+!s100 ^MeO0LYk;BRMo:l8bZR;82
+IYJQCQ@HO:UkBn[6F>6cj61
 R2
-R0
-w1543208743
-8drop_keys_new.v
-Fdrop_keys_new.v
+R12
+R13
+R4
+R5
 L0 23
 R6
 r1
 !s85 0
 31
-R12
-!s107 drop_keys_new.v|
-!s90 -reportprogress|300|drop_keys_new.v|
+R14
+R8
+R9
 !i113 1
 R10
 vfind_x_and_y
-Z18 !s110 1543197568
+R11
 !i10b 1
-!s100 RCEbo96nZ9_l=fo>WU^NJ0
-I=AmRJh:^8N]?6XG?C?K9S0
+!s100 EJDZ`BIA?4g_PcRO^l_791
+IN`RNfP4Vz_]2W9gmTNkhJ3
 R2
-R0
-Z19 w1543135253
+R12
+R13
 R4
 R5
 L0 350
@@ -103,19 +103,19 @@ R6
 r1
 !s85 0
 31
-Z20 !s108 1543197568.000000
+R14
 R8
 R9
 !i113 1
 R10
 vhex_decoder
-R18
+R11
 !i10b 1
 !s100 :;j4[cOkgU`jR>KI2WNEP0
 IEF0Ao?h=J4?WJ>ZEA7EiN1
 R2
-R0
-R19
+R12
+R13
 R4
 R5
 L0 777
@@ -123,18 +123,18 @@ R6
 r1
 !s85 0
 31
-R20
+R14
 R8
 R9
 !i113 1
 R10
 vnote_register
-!s110 1543146023
+R11
 !i10b 1
 !s100 Ah71WnfETXjPE:z@NZ]Q[0
 IFIhk042bo6nl[YDj@o:c[1
 R2
-R0
+R12
 w1542612918
 8note_register.v
 Fnote_register.v
@@ -143,7 +143,7 @@ R6
 r1
 !s85 0
 31
-!s108 1543146023.000000
+R14
 !s107 note_register.v|
 !s90 -reportprogress|300|note_register.v|
 !i113 1
@@ -151,31 +151,31 @@ R10
 vnotes_register
 R11
 !i10b 1
-!s100 _zmZb6VkkFN[l>mKQF;IU2
-I5UT^l0z2OEc_l9NAbNm`S3
+!s100 HJ`?QEDT9ECYCNMdMK@B`2
+I6ECTSU<IMmml`Y]XG8DWh3
 R2
-R0
+R12
 R13
-R14
-R15
-L0 225
+R4
+R5
+L0 304
 R6
 r1
 !s85 0
 31
-R12
-R16
-R17
+R14
+R8
+R9
 !i113 1
 R10
 vplotter
-R18
+R11
 !i10b 1
 !s100 TWd0D0H`aE5H2C^hz9AYK3
 IcM;c0kdhhnnV^;k8He_B_2
 R2
-R0
-R19
+R12
+R13
 R4
 R5
 L0 395
@@ -183,7 +183,7 @@ R6
 r1
 !s85 0
 31
-R20
+R14
 R8
 R9
 !i113 1
@@ -211,41 +211,41 @@ R10
 vrate_driver
 R11
 !i10b 1
-!s100 A0Lz5TXoZzAh9li:06Q_:3
-IT<^Y9kEm9B]F8eDU;?8O71
+!s100 2S5[HY=0No=^;W4T3OW8O1
+IBle36YBk7__`1bcl@4M@m0
 R2
-R0
+R12
 R13
-R14
-R15
-L0 266
+R4
+R5
+L0 592
 R6
 r1
 !s85 0
 31
-R12
-R16
-R17
+R14
+R8
+R9
 !i113 1
 R10
 vshift_register
 R11
 !i10b 1
-!s100 chBmX1n<Q=f7]o1f=H7OS0
-ImM1GHZN0=kV;VGjYFoZb10
+!s100 =P4ImN;6d6VzV28cQJ[Sm1
+IgX:=BD[zW1hT^Bg4Z=9A<3
 R2
-R0
+R12
 R13
-R14
-R15
-L0 297
+R4
+R5
+L0 750
 R6
 r1
 !s85 0
 31
-R12
-R16
-R17
+R14
+R8
+R9
 !i113 1
 R10
 vvga_adapter
@@ -254,7 +254,7 @@ R11
 !s100 bKl<Qa:=1DTmmkfTng^AQ0
 Ie:aU0^aTW`j01Hi_2XOMG3
 R2
-R0
+R12
 w1542678196
 8vga_adapter.v
 Fvga_adapter.v
@@ -263,19 +263,19 @@ R6
 r1
 !s85 0
 31
-R12
+R14
 !s107 vga_adapter.v|
 !s90 -reportprogress|300|vga_adapter.v|
 !i113 1
 R10
 vx_counter
-R18
+R11
 !i10b 1
 !s100 OGP=Go6e?AX1lXfLOTHW80
 IW150WDO^M;F9EFmYJzdCd3
 R2
-R0
-R19
+R12
+R13
 R4
 R5
 L0 540
@@ -283,19 +283,19 @@ R6
 r1
 !s85 0
 31
-R20
+R14
 R8
 R9
 !i113 1
 R10
 vy_counter
-R18
+R11
 !i10b 1
 !s100 kP=ASAk;l_?Q4`=TETf0K3
 IbTF4B^omdI33^LWL2FVh@2
 R2
-R0
-R19
+R12
+R13
 R4
 R5
 L0 488
@@ -303,7 +303,7 @@ R6
 r1
 !s85 0
 31
-R20
+R14
 R8
 R9
 !i113 1

@@ -1,17 +1,17 @@
-Analysis & Synthesis Status : Successful - Tue Nov 27 23:26:05 2018
+Analysis & Synthesis Status : Successful - Wed Nov 28 10:07:25 2018
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : super_guitar_boy
 Top-level Entity Name : super_guitar_boy
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 34
-Total pins : 132
+Total registers : 274
+Total pins : 140
 Total virtual pins : 0
-Total block memory bits : 691,200
+Total block memory bits : 2,796,544
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0
 Total HSSI PMA TX Serializers : 0
-Total PLLs : 1
+Total PLLs : 2
 Total DLLs : 0
